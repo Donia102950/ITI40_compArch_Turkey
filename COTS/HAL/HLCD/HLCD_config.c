@@ -1,17 +1,29 @@
-#include "DGPIO.h"
+/*******************************************************************************************************************************************************/
+/*Author: Donia Mohamed Mahmoud*/
+/*Version: V1.2*/
+/*NAME: HLCD DRIVER */
+/*******************************************************************************************************************************************************/
+
+/*******************************************************************************************************************************************************/
+/*includes*/
+#include "GPIO_interface.h"
+
 #include "HLCD_config.h"
+/*******************************************************************************************************************************************************/
 
-
+/******************************************************************************************************************************************************/
+/*to configure all the pins of LCD*/
  const LCDPins_t LCDPins= {
-.RS.Port= PORT_A,.RS.Pin=PIN_9,.RS.Mode=MODE_PIN9_OP_PP,.RS.Speed=SPEED_PIN9_2MHZ,
-.RW.Port= PORT_A,.RW.Pin=PIN_10,.RW.Mode=MODE_PIN10_OP_PP,.RW.Speed=SPEED_PIN10_2MHZ,
-.EN.Port= PORT_A,.EN.Pin=PIN_11,.EN.Mode=MODE_PIN11_OP_PP,.EN.Speed=SPEED_PIN11_2MHZ,
-.DataPins[0].Port= PORT_A,.DataPins[0].Pin=PIN_0,.DataPins[0].Mode=MODE_PIN0_OP_PP,.DataPins[0].Speed=SPEED_PIN0_2MHZ,
-.DataPins[1].Port= PORT_A,.DataPins[1].Pin=PIN_1,.DataPins[1].Mode=MODE_PIN1_OP_PP,.DataPins[1].Speed=SPEED_PIN1_2MHZ,
-.DataPins[2].Port= PORT_A,.DataPins[2].Pin=PIN_2,.DataPins[2].Mode=MODE_PIN2_OP_PP,.DataPins[2].Speed=SPEED_PIN2_2MHZ,
-.DataPins[3].Port= PORT_A,.DataPins[3].Pin=PIN_3,.DataPins[3].Mode=MODE_PIN3_OP_PP,.DataPins[3].Speed=SPEED_PIN3_2MHZ,
-.DataPins[4].Port= PORT_A,.DataPins[4].Pin=PIN_4,.DataPins[4].Mode=MODE_PIN4_OP_PP,.DataPins[4].Speed=SPEED_PIN4_2MHZ,
-.DataPins[5].Port= PORT_A,.DataPins[5].Pin=PIN_5,.DataPins[5].Mode=MODE_PIN5_OP_PP,.DataPins[5].Speed=SPEED_PIN5_2MHZ,
-.DataPins[6].Port= PORT_A,.DataPins[6].Pin=PIN_6,.DataPins[6].Mode=MODE_PIN6_OP_PP,.DataPins[6].Speed=SPEED_PIN6_2MHZ,
-.DataPins[7].Port= PORT_A,.DataPins[7].Pin=PIN_7,.DataPins[7].Mode=MODE_PIN7_OP_PP,.DataPins[7].Speed=SPEED_PIN7_2MHZ
+.RS.port= PORTA,.RS.pin=PIN9,.RS.mode=MODE_GENERALOUTPUT_PUSHPULL,.RS.speed=SPEED_2MHZ,
+.RW.port= PORTA,.RW.pin=PIN10,.RW.mode=MODE_GENERALOUTPUT_PUSHPULL,.RW.speed=SPEED_2MHZ,
+.EN.port= PORTA,.EN.pin=PIN11,.EN.mode=MODE_GENERALOUTPUT_PUSHPULL,.EN.speed=SPEED_2MHZ,
+.DataPins[0].port= PORTA,.DataPins[0].pin=PIN0,.DataPins[0].mode=MODE_GENERALOUTPUT_PUSHPULL,.DataPins[0].speed=SPEED_2MHZ,
+.DataPins[1].port= PORTA,.DataPins[1].pin=PIN1,.DataPins[1].mode=MODE_GENERALOUTPUT_PUSHPULL,.DataPins[1].speed=SPEED_2MHZ,
+.DataPins[2].port= PORTA,.DataPins[2].pin=PIN2,.DataPins[2].mode=MODE_GENERALOUTPUT_PUSHPULL,.DataPins[2].speed=SPEED_2MHZ,
+.DataPins[3].port= PORTA,.DataPins[3].pin=PIN3,.DataPins[3].mode=MODE_GENERALOUTPUT_PUSHPULL,.DataPins[3].speed=SPEED_2MHZ,
+.DataPins[4].port= PORTA,.DataPins[4].pin=PIN4,.DataPins[4].mode=MODE_GENERALOUTPUT_PUSHPULL,.DataPins[4].speed=SPEED_2MHZ,
+.DataPins[5].port= PORTA,.DataPins[5].pin=PIN5,.DataPins[5].mode=MODE_GENERALOUTPUT_PUSHPULL,.DataPins[5].speed=SPEED_2MHZ,
+.DataPins[6].port= PORTA,.DataPins[6].pin=PIN6,.DataPins[6].mode=MODE_GENERALOUTPUT_PUSHPULL,.DataPins[6].speed=SPEED_2MHZ,
+.DataPins[7].port= PORTA,.DataPins[7].pin=PIN7,.DataPins[7].mode=MODE_GENERALOUTPUT_PUSHPULL,.DataPins[7].speed=SPEED_2MHZ
 };
+/********************************************************************************************************************************************************/
