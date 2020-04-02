@@ -52,8 +52,8 @@ data_frame RxFrame[QUEUE_LENGTH];
 
 /*********************************************************************************************************************/
 
-uint_8t* RLocal_Buffer=RxFrame;
-uint_8t* TLocal_Buffer=TxFrame;
+uint_8t* RLocal_Buffer=&(RxFrame[0].SwitchState);
+uint_8t* TLocal_Buffer=&(TxFrame[0].SwitchState);
 
 /*********************************************************************************************************************/
 
