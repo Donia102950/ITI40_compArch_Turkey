@@ -1,13 +1,13 @@
 Archive member included to satisfy reference by file (symbol)
 
 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_addsubsf3.o)
-                              ./src/UART_program.o (__aeabi_fsub)
+                              ./MCAL/UART_program.o (__aeabi_fsub)
 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_muldivsf3.o)
-                              ./src/UART_program.o (__aeabi_fmul)
+                              ./MCAL/UART_program.o (__aeabi_fmul)
 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_fixunssfsi.o)
-                              ./src/UART_program.o (__aeabi_f2uiz)
+                              ./MCAL/UART_program.o (__aeabi_f2uiz)
 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_aeabi_uldivmod.o)
-                              ./src/SYSTICK.o (__aeabi_uldivmod)
+                              ./MCAL/SYSTICK.o (__aeabi_uldivmod)
 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_udivmoddi4.o)
                               f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_aeabi_uldivmod.o) (__udivmoddi4)
 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_dvmd_tls.o)
@@ -46,20 +46,17 @@ f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tool
 Allocating common symbols
 Common symbol       size              file
 
-RxFrame             0x3               ./src/main.o
+RxFrame             0x2               ./src/App.o
 errno               0x4               ./system/src/newlib/_syscalls.o
-TxFrame             0x3               ./src/main.o
-task4               0x8               ./src/main.o
-APPcbf              0x4               ./src/SYSTICK.o
-Gpio                0x28              ./src/HLED.o
-task1               0x8               ./src/main.o
-LCDTask             0x8               ./src/HLCD.o
-task2               0x8               ./src/main.o
-idx                 0x1               ./src/Sched.o
-SysTask             0x20              ./src/Sched.o
-OSFlag              0x4               ./src/Sched.o
-task3               0x8               ./src/main.o
-Led                 0x1e              ./src/HLED.o
+TxFrame             0x2               ./src/App.o
+APPcbf              0x4               ./MCAL/SYSTICK.o
+Gpio                0x28              ./HAL/HLED.o
+LCDTask             0x8               ./HAL/HLCD.o
+idx                 0x1               ./OS/Sched.o
+SysTask             0x30              ./OS/Sched.o
+SwitchTask          0x8               ./HAL/HSwitch_program.o
+OSFlag              0x4               ./OS/Sched.o
+Led                 0x1e              ./HAL/HLED.o
 
 Discarded input sections
 
@@ -1376,260 +1373,16 @@ Discarded input sections
  .bss           0x00000000        0x0 ./system/src/cmsis/vectors_stm32f10x.o
  .debug_macro   0x00000000      0xa6c ./system/src/cmsis/vectors_stm32f10x.o
  .debug_macro   0x00000000      0x34e ./system/src/cmsis/vectors_stm32f10x.o
- .group         0x00000000        0x8 ./src/GPIO_program.o
- .group         0x00000000        0x8 ./src/GPIO_program.o
- .group         0x00000000        0x8 ./src/GPIO_program.o
- .group         0x00000000        0x8 ./src/GPIO_program.o
- .text          0x00000000        0x0 ./src/GPIO_program.o
- .data          0x00000000        0x0 ./src/GPIO_program.o
- .bss           0x00000000        0x0 ./src/GPIO_program.o
- .group         0x00000000        0x8 ./src/HLCD.o
- .group         0x00000000        0x8 ./src/HLCD.o
- .group         0x00000000        0x8 ./src/HLCD.o
- .group         0x00000000        0x8 ./src/HLCD.o
- .group         0x00000000        0x8 ./src/HLCD.o
- .text          0x00000000        0x0 ./src/HLCD.o
- .data          0x00000000        0x0 ./src/HLCD.o
- .bss           0x00000000        0x0 ./src/HLCD.o
- .text.LCD_WriteData
-                0x00000000       0x3c ./src/HLCD.o
- .text.LCD_ClearLCD
-                0x00000000       0x18 ./src/HLCD.o
- .debug_macro   0x00000000      0x88c ./src/HLCD.o
- .debug_macro   0x00000000       0x10 ./src/HLCD.o
- .group         0x00000000        0x8 ./src/HLCD_config.o
- .group         0x00000000        0x8 ./src/HLCD_config.o
- .group         0x00000000        0x8 ./src/HLCD_config.o
- .group         0x00000000        0x8 ./src/HLCD_config.o
- .text          0x00000000        0x0 ./src/HLCD_config.o
- .data          0x00000000        0x0 ./src/HLCD_config.o
- .bss           0x00000000        0x0 ./src/HLCD_config.o
- .debug_macro   0x00000000      0x88c ./src/HLCD_config.o
- .debug_macro   0x00000000       0x10 ./src/HLCD_config.o
- .debug_macro   0x00000000       0x82 ./src/HLCD_config.o
- .debug_macro   0x00000000       0x64 ./src/HLCD_config.o
- .group         0x00000000        0x8 ./src/HLED.o
- .group         0x00000000        0x8 ./src/HLED.o
- .group         0x00000000        0x8 ./src/HLED.o
- .group         0x00000000        0x8 ./src/HLED.o
- .group         0x00000000        0x8 ./src/HLED.o
- .group         0x00000000        0x8 ./src/HLED.o
- .text          0x00000000        0x0 ./src/HLED.o
- .data          0x00000000        0x0 ./src/HLED.o
- .bss           0x00000000        0x0 ./src/HLED.o
- .text.LED_SetLedState
-                0x00000000       0x58 ./src/HLED.o
- .debug_macro   0x00000000      0x88c ./src/HLED.o
- .debug_macro   0x00000000       0x10 ./src/HLED.o
- .debug_macro   0x00000000       0x22 ./src/HLED.o
- .debug_macro   0x00000000       0x82 ./src/HLED.o
- .group         0x00000000        0x8 ./src/HSwitch_Config.o
- .group         0x00000000        0x8 ./src/HSwitch_Config.o
- .group         0x00000000        0x8 ./src/HSwitch_Config.o
- .text          0x00000000        0x0 ./src/HSwitch_Config.o
- .data          0x00000000        0x0 ./src/HSwitch_Config.o
- .bss           0x00000000        0x0 ./src/HSwitch_Config.o
- .debug_macro   0x00000000      0x88c ./src/HSwitch_Config.o
- .debug_macro   0x00000000       0x10 ./src/HSwitch_Config.o
- .debug_macro   0x00000000       0x82 ./src/HSwitch_Config.o
- .group         0x00000000        0x8 ./src/HSwitch_program.o
- .group         0x00000000        0x8 ./src/HSwitch_program.o
- .group         0x00000000        0x8 ./src/HSwitch_program.o
- .text          0x00000000        0x0 ./src/HSwitch_program.o
- .data          0x00000000        0x0 ./src/HSwitch_program.o
- .bss           0x00000000        0x0 ./src/HSwitch_program.o
- .text.HSwitch_GetState
-                0x00000000        0xc ./src/HSwitch_program.o
- .text.Switch_Runnable
-                0x00000000       0x64 ./src/HSwitch_program.o
- .bss.Prev_state.3744
-                0x00000000        0x2 ./src/HSwitch_program.o
- .bss.SwitchState
-                0x00000000        0x2 ./src/HSwitch_program.o
- .bss.counter.3745
-                0x00000000        0x2 ./src/HSwitch_program.o
- .debug_macro   0x00000000      0x88c ./src/HSwitch_program.o
- .debug_macro   0x00000000       0x82 ./src/HSwitch_program.o
- .group         0x00000000        0x8 ./src/NVIC_Program.o
- .group         0x00000000        0x8 ./src/NVIC_Program.o
- .group         0x00000000        0x8 ./src/NVIC_Program.o
- .text          0x00000000        0x0 ./src/NVIC_Program.o
- .data          0x00000000        0x0 ./src/NVIC_Program.o
- .bss           0x00000000        0x0 ./src/NVIC_Program.o
- .text.NVIC_EnableInterrupt
-                0x00000000       0x24 ./src/NVIC_Program.o
- .text.NVIC_DisableInterrupt
-                0x00000000       0x24 ./src/NVIC_Program.o
- .text.NVIC_setPending
-                0x00000000       0x24 ./src/NVIC_Program.o
- .text.NVIC_ClearPending
-                0x00000000       0x24 ./src/NVIC_Program.o
- .text.NVIC_GetEnabled
-                0x00000000       0x1c ./src/NVIC_Program.o
- .text.NVIC_GetPending
-                0x00000000       0x1c ./src/NVIC_Program.o
- .text.NVIC_GetActive
-                0x00000000       0x1c ./src/NVIC_Program.o
- .text.NVIC_SetPeriorty
-                0x00000000       0x10 ./src/NVIC_Program.o
- .text.NVIC_InitPriority
-                0x00000000        0xc ./src/NVIC_Program.o
- .text.Write_ToPRIMASK
-                0x00000000        0x8 ./src/NVIC_Program.o
- .text.Write_ToFAULTMASK
-                0x00000000        0x8 ./src/NVIC_Program.o
- .text.Write_ToBASEPRI
-                0x00000000        0x8 ./src/NVIC_Program.o
- .debug_info    0x00000000      0x347 ./src/NVIC_Program.o
- .debug_abbrev  0x00000000       0xf0 ./src/NVIC_Program.o
- .debug_loc     0x00000000      0x129 ./src/NVIC_Program.o
- .debug_aranges
-                0x00000000       0x78 ./src/NVIC_Program.o
- .debug_ranges  0x00000000       0x68 ./src/NVIC_Program.o
- .debug_macro   0x00000000       0x23 ./src/NVIC_Program.o
- .debug_macro   0x00000000      0x88c ./src/NVIC_Program.o
- .debug_macro   0x00000000       0x10 ./src/NVIC_Program.o
- .debug_macro   0x00000000       0x2e ./src/NVIC_Program.o
- .debug_line    0x00000000      0x130 ./src/NVIC_Program.o
- .debug_str     0x00000000     0x2842 ./src/NVIC_Program.o
- .comment       0x00000000       0x6f ./src/NVIC_Program.o
- .debug_frame   0x00000000      0x100 ./src/NVIC_Program.o
- .ARM.attributes
-                0x00000000       0x33 ./src/NVIC_Program.o
- .group         0x00000000        0x8 ./src/RCC_program.o
- .group         0x00000000        0x8 ./src/RCC_program.o
- .group         0x00000000        0x8 ./src/RCC_program.o
- .group         0x00000000        0x8 ./src/RCC_program.o
- .group         0x00000000        0x8 ./src/RCC_program.o
- .text          0x00000000        0x0 ./src/RCC_program.o
- .data          0x00000000        0x0 ./src/RCC_program.o
- .bss           0x00000000        0x0 ./src/RCC_program.o
- .text.RCC_ErrSysClk
-                0x00000000      0x1ac ./src/RCC_program.o
- .text.RCC_voidEnPeriClk
-                0x00000000       0x58 ./src/RCC_program.o
- .text.RCC_voidDisPeriClk
-                0x00000000       0x60 ./src/RCC_program.o
- .text.RCC_u32GetAHBClkValue
-                0x00000000       0x4c ./src/RCC_program.o
- .text.APB2_Divider
-                0x00000000       0x80 ./src/RCC_program.o
- .text.APB1_Divider
-                0x00000000       0x7c ./src/RCC_program.o
- .text.AHB_Divider
-                0x00000000       0xe0 ./src/RCC_program.o
- .debug_macro   0x00000000      0x88c ./src/RCC_program.o
- .debug_macro   0x00000000       0x10 ./src/RCC_program.o
- .debug_macro   0x00000000       0x22 ./src/RCC_program.o
- .debug_macro   0x00000000      0x405 ./src/RCC_program.o
- .group         0x00000000        0x8 ./src/SYSTICK.o
- .group         0x00000000        0x8 ./src/SYSTICK.o
- .group         0x00000000        0x8 ./src/SYSTICK.o
- .group         0x00000000        0x8 ./src/SYSTICK.o
- .text          0x00000000        0x0 ./src/SYSTICK.o
- .data          0x00000000        0x0 ./src/SYSTICK.o
- .bss           0x00000000        0x0 ./src/SYSTICK.o
- .text.SYSTICK_Stop
-                0x00000000       0x14 ./src/SYSTICK.o
- .debug_macro   0x00000000      0x88c ./src/SYSTICK.o
- .debug_macro   0x00000000       0x10 ./src/SYSTICK.o
- .group         0x00000000        0x8 ./src/Sched.o
- .group         0x00000000        0x8 ./src/Sched.o
- .group         0x00000000        0x8 ./src/Sched.o
- .group         0x00000000        0x8 ./src/Sched.o
- .group         0x00000000        0x8 ./src/Sched.o
- .text          0x00000000        0x0 ./src/Sched.o
- .data          0x00000000        0x0 ./src/Sched.o
- .bss           0x00000000        0x0 ./src/Sched.o
- .text.Sched_Suspend
-                0x00000000       0x18 ./src/Sched.o
- .debug_macro   0x00000000      0x88c ./src/Sched.o
- .debug_macro   0x00000000       0x10 ./src/Sched.o
- .debug_macro   0x00000000      0x405 ./src/Sched.o
- .group         0x00000000        0x8 ./src/Sched_config.o
- .group         0x00000000        0x8 ./src/Sched_config.o
- .group         0x00000000        0x8 ./src/Sched_config.o
- .text          0x00000000        0x0 ./src/Sched_config.o
- .data          0x00000000        0x0 ./src/Sched_config.o
- .bss           0x00000000        0x0 ./src/Sched_config.o
- .debug_macro   0x00000000      0x88c ./src/Sched_config.o
- .debug_macro   0x00000000       0x10 ./src/Sched_config.o
- .debug_macro   0x00000000       0x16 ./src/Sched_config.o
- .group         0x00000000        0x8 ./src/UARTHandler_program.o
- .group         0x00000000        0x8 ./src/UARTHandler_program.o
- .group         0x00000000        0x8 ./src/UARTHandler_program.o
- .group         0x00000000        0x8 ./src/UARTHandler_program.o
- .group         0x00000000        0x8 ./src/UARTHandler_program.o
- .group         0x00000000        0x8 ./src/UARTHandler_program.o
- .group         0x00000000        0x8 ./src/UARTHandler_program.o
- .text          0x00000000        0x0 ./src/UARTHandler_program.o
- .data          0x00000000        0x0 ./src/UARTHandler_program.o
- .bss           0x00000000        0x0 ./src/UARTHandler_program.o
- .text.HUART_Init
-                0x00000000       0x60 ./src/UARTHandler_program.o
- .text.HUART_Configuration
-                0x00000000       0x28 ./src/UARTHandler_program.o
- .text.HUART_SendData
-                0x00000000        0x8 ./src/UARTHandler_program.o
- .text.HUART_ReceiveData
-                0x00000000        0x8 ./src/UARTHandler_program.o
- .debug_info    0x00000000      0x3aa ./src/UARTHandler_program.o
- .debug_abbrev  0x00000000      0x116 ./src/UARTHandler_program.o
- .debug_loc     0x00000000      0x105 ./src/UARTHandler_program.o
- .debug_aranges
-                0x00000000       0x38 ./src/UARTHandler_program.o
- .debug_ranges  0x00000000       0x28 ./src/UARTHandler_program.o
- .debug_macro   0x00000000       0x57 ./src/UARTHandler_program.o
- .debug_macro   0x00000000      0x88c ./src/UARTHandler_program.o
- .debug_macro   0x00000000       0x10 ./src/UARTHandler_program.o
- .debug_macro   0x00000000       0x82 ./src/UARTHandler_program.o
- .debug_macro   0x00000000      0x40b ./src/UARTHandler_program.o
- .debug_macro   0x00000000       0x2e ./src/UARTHandler_program.o
- .debug_macro   0x00000000      0x10c ./src/UARTHandler_program.o
- .debug_macro   0x00000000       0x10 ./src/UARTHandler_program.o
- .debug_line    0x00000000      0x123 ./src/UARTHandler_program.o
- .debug_str     0x00000000     0x3cc8 ./src/UARTHandler_program.o
- .comment       0x00000000       0x6f ./src/UARTHandler_program.o
- .debug_frame   0x00000000       0x80 ./src/UARTHandler_program.o
- .ARM.attributes
-                0x00000000       0x33 ./src/UARTHandler_program.o
- .group         0x00000000        0x8 ./src/UART_program.o
- .group         0x00000000        0x8 ./src/UART_program.o
- .group         0x00000000        0x8 ./src/UART_program.o
- .group         0x00000000        0x8 ./src/UART_program.o
- .text          0x00000000        0x0 ./src/UART_program.o
- .data          0x00000000        0x0 ./src/UART_program.o
- .bss           0x00000000        0x0 ./src/UART_program.o
- .text.UART_Init
-                0x00000000       0x28 ./src/UART_program.o
- .text.UART_Config
-                0x00000000       0xc4 ./src/UART_program.o
- .text.UART_sendBuffer
-                0x00000000       0x30 ./src/UART_program.o
- .text.UART_receiveBuffer
-                0x00000000       0x2c ./src/UART_program.o
- .text.UART_setTXcbf
-                0x00000000        0xc ./src/UART_program.o
- .text.UART_setRXcbf
-                0x00000000        0x4 ./src/UART_program.o
- .debug_macro   0x00000000      0x88c ./src/UART_program.o
- .debug_macro   0x00000000       0x10 ./src/UART_program.o
- .debug_macro   0x00000000       0x10 ./src/UART_program.o
- .group         0x00000000        0x8 ./src/_write.o
- .text          0x00000000        0x0 ./src/_write.o
- .data          0x00000000        0x0 ./src/_write.o
- .bss           0x00000000        0x0 ./src/_write.o
- .debug_info    0x00000000       0x21 ./src/_write.o
- .debug_abbrev  0x00000000       0x13 ./src/_write.o
- .debug_aranges
-                0x00000000       0x18 ./src/_write.o
- .debug_macro   0x00000000       0x11 ./src/_write.o
- .debug_macro   0x00000000      0xa6c ./src/_write.o
- .debug_line    0x00000000       0x30 ./src/_write.o
- .debug_str     0x00000000     0x2d33 ./src/_write.o
- .comment       0x00000000       0x7f ./src/_write.o
- .ARM.attributes
-                0x00000000       0x33 ./src/_write.o
+ .group         0x00000000        0x8 ./src/App.o
+ .group         0x00000000        0x8 ./src/App.o
+ .group         0x00000000        0x8 ./src/App.o
+ .group         0x00000000        0x8 ./src/App.o
+ .group         0x00000000        0x8 ./src/App.o
+ .group         0x00000000        0x8 ./src/App.o
+ .group         0x00000000        0x8 ./src/App.o
+ .text          0x00000000        0x0 ./src/App.o
+ .data          0x00000000        0x0 ./src/App.o
+ .bss           0x00000000        0x0 ./src/App.o
  .group         0x00000000        0x8 ./src/main.o
  .group         0x00000000        0x8 ./src/main.o
  .group         0x00000000        0x8 ./src/main.o
@@ -1643,10 +1396,219 @@ Discarded input sections
  .debug_macro   0x00000000      0x88c ./src/main.o
  .debug_macro   0x00000000       0x10 ./src/main.o
  .debug_macro   0x00000000       0x22 ./src/main.o
- .debug_macro   0x00000000       0x82 ./src/main.o
+ .debug_macro   0x00000000       0x88 ./src/main.o
  .debug_macro   0x00000000      0x40b ./src/main.o
  .debug_macro   0x00000000       0x2e ./src/main.o
  .debug_macro   0x00000000       0x10 ./src/main.o
+ .group         0x00000000        0x8 ./OS/Sched.o
+ .group         0x00000000        0x8 ./OS/Sched.o
+ .group         0x00000000        0x8 ./OS/Sched.o
+ .group         0x00000000        0x8 ./OS/Sched.o
+ .group         0x00000000        0x8 ./OS/Sched.o
+ .text          0x00000000        0x0 ./OS/Sched.o
+ .data          0x00000000        0x0 ./OS/Sched.o
+ .bss           0x00000000        0x0 ./OS/Sched.o
+ .text.Sched_Suspend
+                0x00000000       0x18 ./OS/Sched.o
+ .debug_macro   0x00000000      0x88c ./OS/Sched.o
+ .debug_macro   0x00000000       0x10 ./OS/Sched.o
+ .debug_macro   0x00000000      0x40b ./OS/Sched.o
+ .group         0x00000000        0x8 ./OS/Sched_config.o
+ .group         0x00000000        0x8 ./OS/Sched_config.o
+ .group         0x00000000        0x8 ./OS/Sched_config.o
+ .text          0x00000000        0x0 ./OS/Sched_config.o
+ .data          0x00000000        0x0 ./OS/Sched_config.o
+ .bss           0x00000000        0x0 ./OS/Sched_config.o
+ .debug_macro   0x00000000      0x88c ./OS/Sched_config.o
+ .debug_macro   0x00000000       0x10 ./OS/Sched_config.o
+ .debug_macro   0x00000000       0x16 ./OS/Sched_config.o
+ .group         0x00000000        0x8 ./MCAL/GPIO_program.o
+ .group         0x00000000        0x8 ./MCAL/GPIO_program.o
+ .group         0x00000000        0x8 ./MCAL/GPIO_program.o
+ .group         0x00000000        0x8 ./MCAL/GPIO_program.o
+ .text          0x00000000        0x0 ./MCAL/GPIO_program.o
+ .data          0x00000000        0x0 ./MCAL/GPIO_program.o
+ .bss           0x00000000        0x0 ./MCAL/GPIO_program.o
+ .debug_macro   0x00000000      0x88c ./MCAL/GPIO_program.o
+ .debug_macro   0x00000000       0x10 ./MCAL/GPIO_program.o
+ .debug_macro   0x00000000       0x22 ./MCAL/GPIO_program.o
+ .debug_macro   0x00000000       0x88 ./MCAL/GPIO_program.o
+ .group         0x00000000        0x8 ./MCAL/NVIC_Program.o
+ .group         0x00000000        0x8 ./MCAL/NVIC_Program.o
+ .group         0x00000000        0x8 ./MCAL/NVIC_Program.o
+ .text          0x00000000        0x0 ./MCAL/NVIC_Program.o
+ .data          0x00000000        0x0 ./MCAL/NVIC_Program.o
+ .bss           0x00000000        0x0 ./MCAL/NVIC_Program.o
+ .text.NVIC_EnableInterrupt
+                0x00000000       0x24 ./MCAL/NVIC_Program.o
+ .text.NVIC_DisableInterrupt
+                0x00000000       0x24 ./MCAL/NVIC_Program.o
+ .text.NVIC_setPending
+                0x00000000       0x24 ./MCAL/NVIC_Program.o
+ .text.NVIC_ClearPending
+                0x00000000       0x24 ./MCAL/NVIC_Program.o
+ .text.NVIC_GetEnabled
+                0x00000000       0x1c ./MCAL/NVIC_Program.o
+ .text.NVIC_GetPending
+                0x00000000       0x1c ./MCAL/NVIC_Program.o
+ .text.NVIC_GetActive
+                0x00000000       0x1c ./MCAL/NVIC_Program.o
+ .text.NVIC_SetPeriorty
+                0x00000000       0x10 ./MCAL/NVIC_Program.o
+ .text.NVIC_InitPriority
+                0x00000000        0xc ./MCAL/NVIC_Program.o
+ .text.Write_ToPRIMASK
+                0x00000000        0x8 ./MCAL/NVIC_Program.o
+ .text.Write_ToFAULTMASK
+                0x00000000        0x8 ./MCAL/NVIC_Program.o
+ .text.Write_ToBASEPRI
+                0x00000000        0x8 ./MCAL/NVIC_Program.o
+ .debug_info    0x00000000      0x347 ./MCAL/NVIC_Program.o
+ .debug_abbrev  0x00000000       0xf0 ./MCAL/NVIC_Program.o
+ .debug_loc     0x00000000      0x129 ./MCAL/NVIC_Program.o
+ .debug_aranges
+                0x00000000       0x78 ./MCAL/NVIC_Program.o
+ .debug_ranges  0x00000000       0x68 ./MCAL/NVIC_Program.o
+ .debug_macro   0x00000000       0x23 ./MCAL/NVIC_Program.o
+ .debug_macro   0x00000000      0x88c ./MCAL/NVIC_Program.o
+ .debug_macro   0x00000000       0x10 ./MCAL/NVIC_Program.o
+ .debug_macro   0x00000000       0x2e ./MCAL/NVIC_Program.o
+ .debug_line    0x00000000      0x247 ./MCAL/NVIC_Program.o
+ .debug_str     0x00000000     0x2843 ./MCAL/NVIC_Program.o
+ .comment       0x00000000       0x6f ./MCAL/NVIC_Program.o
+ .debug_frame   0x00000000      0x100 ./MCAL/NVIC_Program.o
+ .ARM.attributes
+                0x00000000       0x33 ./MCAL/NVIC_Program.o
+ .group         0x00000000        0x8 ./MCAL/RCC_program.o
+ .group         0x00000000        0x8 ./MCAL/RCC_program.o
+ .group         0x00000000        0x8 ./MCAL/RCC_program.o
+ .group         0x00000000        0x8 ./MCAL/RCC_program.o
+ .group         0x00000000        0x8 ./MCAL/RCC_program.o
+ .text          0x00000000        0x0 ./MCAL/RCC_program.o
+ .data          0x00000000        0x0 ./MCAL/RCC_program.o
+ .bss           0x00000000        0x0 ./MCAL/RCC_program.o
+ .text.RCC_ErrSysClk
+                0x00000000      0x1ac ./MCAL/RCC_program.o
+ .text.RCC_voidEnPeriClk
+                0x00000000       0x58 ./MCAL/RCC_program.o
+ .text.RCC_voidDisPeriClk
+                0x00000000       0x60 ./MCAL/RCC_program.o
+ .text.RCC_u32GetAHBClkValue
+                0x00000000       0x4c ./MCAL/RCC_program.o
+ .text.APB2_Divider
+                0x00000000       0x80 ./MCAL/RCC_program.o
+ .text.APB1_Divider
+                0x00000000       0x7c ./MCAL/RCC_program.o
+ .text.AHB_Divider
+                0x00000000       0xe0 ./MCAL/RCC_program.o
+ .debug_macro   0x00000000      0x88c ./MCAL/RCC_program.o
+ .debug_macro   0x00000000       0x10 ./MCAL/RCC_program.o
+ .debug_macro   0x00000000       0x22 ./MCAL/RCC_program.o
+ .debug_macro   0x00000000      0x40b ./MCAL/RCC_program.o
+ .group         0x00000000        0x8 ./MCAL/SYSTICK.o
+ .group         0x00000000        0x8 ./MCAL/SYSTICK.o
+ .group         0x00000000        0x8 ./MCAL/SYSTICK.o
+ .group         0x00000000        0x8 ./MCAL/SYSTICK.o
+ .text          0x00000000        0x0 ./MCAL/SYSTICK.o
+ .data          0x00000000        0x0 ./MCAL/SYSTICK.o
+ .bss           0x00000000        0x0 ./MCAL/SYSTICK.o
+ .text.SYSTICK_Stop
+                0x00000000       0x14 ./MCAL/SYSTICK.o
+ .debug_macro   0x00000000      0x88c ./MCAL/SYSTICK.o
+ .debug_macro   0x00000000       0x10 ./MCAL/SYSTICK.o
+ .group         0x00000000        0x8 ./MCAL/UART_program.o
+ .group         0x00000000        0x8 ./MCAL/UART_program.o
+ .group         0x00000000        0x8 ./MCAL/UART_program.o
+ .group         0x00000000        0x8 ./MCAL/UART_program.o
+ .text          0x00000000        0x0 ./MCAL/UART_program.o
+ .data          0x00000000        0x0 ./MCAL/UART_program.o
+ .bss           0x00000000        0x0 ./MCAL/UART_program.o
+ .text.UART_Init
+                0x00000000       0x28 ./MCAL/UART_program.o
+ .text.UART_Config
+                0x00000000       0xc4 ./MCAL/UART_program.o
+ .text.UART_setTXcbf
+                0x00000000        0xc ./MCAL/UART_program.o
+ .text.UART_setRXcbf
+                0x00000000        0x4 ./MCAL/UART_program.o
+ .debug_macro   0x00000000      0x88c ./MCAL/UART_program.o
+ .debug_macro   0x00000000       0x10 ./MCAL/UART_program.o
+ .debug_macro   0x00000000       0x10 ./MCAL/UART_program.o
+ .group         0x00000000        0x8 ./HAL/HLCD.o
+ .group         0x00000000        0x8 ./HAL/HLCD.o
+ .group         0x00000000        0x8 ./HAL/HLCD.o
+ .group         0x00000000        0x8 ./HAL/HLCD.o
+ .group         0x00000000        0x8 ./HAL/HLCD.o
+ .text          0x00000000        0x0 ./HAL/HLCD.o
+ .data          0x00000000        0x0 ./HAL/HLCD.o
+ .bss           0x00000000        0x0 ./HAL/HLCD.o
+ .text.LCD_ClearLCD
+                0x00000000       0x18 ./HAL/HLCD.o
+ .debug_macro   0x00000000      0x88c ./HAL/HLCD.o
+ .debug_macro   0x00000000       0x10 ./HAL/HLCD.o
+ .debug_macro   0x00000000      0x40b ./HAL/HLCD.o
+ .debug_macro   0x00000000       0x88 ./HAL/HLCD.o
+ .group         0x00000000        0x8 ./HAL/HLCD_config.o
+ .group         0x00000000        0x8 ./HAL/HLCD_config.o
+ .group         0x00000000        0x8 ./HAL/HLCD_config.o
+ .group         0x00000000        0x8 ./HAL/HLCD_config.o
+ .text          0x00000000        0x0 ./HAL/HLCD_config.o
+ .data          0x00000000        0x0 ./HAL/HLCD_config.o
+ .bss           0x00000000        0x0 ./HAL/HLCD_config.o
+ .debug_macro   0x00000000      0x88c ./HAL/HLCD_config.o
+ .debug_macro   0x00000000       0x10 ./HAL/HLCD_config.o
+ .debug_macro   0x00000000       0x64 ./HAL/HLCD_config.o
+ .group         0x00000000        0x8 ./HAL/HLED.o
+ .group         0x00000000        0x8 ./HAL/HLED.o
+ .group         0x00000000        0x8 ./HAL/HLED.o
+ .group         0x00000000        0x8 ./HAL/HLED.o
+ .group         0x00000000        0x8 ./HAL/HLED.o
+ .group         0x00000000        0x8 ./HAL/HLED.o
+ .text          0x00000000        0x0 ./HAL/HLED.o
+ .data          0x00000000        0x0 ./HAL/HLED.o
+ .bss           0x00000000        0x0 ./HAL/HLED.o
+ .debug_macro   0x00000000      0x88c ./HAL/HLED.o
+ .debug_macro   0x00000000       0x10 ./HAL/HLED.o
+ .debug_macro   0x00000000       0x22 ./HAL/HLED.o
+ .debug_macro   0x00000000       0x88 ./HAL/HLED.o
+ .group         0x00000000        0x8 ./HAL/HSwitch_Config.o
+ .group         0x00000000        0x8 ./HAL/HSwitch_Config.o
+ .group         0x00000000        0x8 ./HAL/HSwitch_Config.o
+ .group         0x00000000        0x8 ./HAL/HSwitch_Config.o
+ .text          0x00000000        0x0 ./HAL/HSwitch_Config.o
+ .data          0x00000000        0x0 ./HAL/HSwitch_Config.o
+ .bss           0x00000000        0x0 ./HAL/HSwitch_Config.o
+ .debug_macro   0x00000000      0x88c ./HAL/HSwitch_Config.o
+ .debug_macro   0x00000000       0x10 ./HAL/HSwitch_Config.o
+ .debug_macro   0x00000000       0x88 ./HAL/HSwitch_Config.o
+ .group         0x00000000        0x8 ./HAL/HSwitch_program.o
+ .group         0x00000000        0x8 ./HAL/HSwitch_program.o
+ .group         0x00000000        0x8 ./HAL/HSwitch_program.o
+ .text          0x00000000        0x0 ./HAL/HSwitch_program.o
+ .data          0x00000000        0x0 ./HAL/HSwitch_program.o
+ .bss           0x00000000        0x0 ./HAL/HSwitch_program.o
+ .debug_macro   0x00000000      0x88c ./HAL/HSwitch_program.o
+ .debug_macro   0x00000000       0x82 ./HAL/HSwitch_program.o
+ .group         0x00000000        0x8 ./HAL/UARTHandler_program.o
+ .group         0x00000000        0x8 ./HAL/UARTHandler_program.o
+ .group         0x00000000        0x8 ./HAL/UARTHandler_program.o
+ .group         0x00000000        0x8 ./HAL/UARTHandler_program.o
+ .group         0x00000000        0x8 ./HAL/UARTHandler_program.o
+ .group         0x00000000        0x8 ./HAL/UARTHandler_program.o
+ .group         0x00000000        0x8 ./HAL/UARTHandler_program.o
+ .text          0x00000000        0x0 ./HAL/UARTHandler_program.o
+ .data          0x00000000        0x0 ./HAL/UARTHandler_program.o
+ .bss           0x00000000        0x0 ./HAL/UARTHandler_program.o
+ .text.HUART_Init
+                0x00000000       0x60 ./HAL/UARTHandler_program.o
+ .text.HUART_Configuration
+                0x00000000       0x28 ./HAL/UARTHandler_program.o
+ .debug_macro   0x00000000      0x88c ./HAL/UARTHandler_program.o
+ .debug_macro   0x00000000       0x10 ./HAL/UARTHandler_program.o
+ .debug_macro   0x00000000       0x82 ./HAL/UARTHandler_program.o
+ .debug_macro   0x00000000      0x40b ./HAL/UARTHandler_program.o
+ .debug_macro   0x00000000       0x2e ./HAL/UARTHandler_program.o
+ .debug_macro   0x00000000       0x10 ./HAL/UARTHandler_program.o
  .text          0x00000000      0x21c f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_addsubsf3.o)
  .data          0x00000000        0x0 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_addsubsf3.o)
  .bss           0x00000000        0x0 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_arm_addsubsf3.o)
@@ -1753,21 +1715,21 @@ LOAD ./system/src/cortexm/_reset_hardware.o
 LOAD ./system/src/cortexm/exception_handlers.o
 LOAD ./system/src/cmsis/system_stm32f10x.o
 LOAD ./system/src/cmsis/vectors_stm32f10x.o
-LOAD ./src/GPIO_program.o
-LOAD ./src/HLCD.o
-LOAD ./src/HLCD_config.o
-LOAD ./src/HLED.o
-LOAD ./src/HSwitch_Config.o
-LOAD ./src/HSwitch_program.o
-LOAD ./src/NVIC_Program.o
-LOAD ./src/RCC_program.o
-LOAD ./src/SYSTICK.o
-LOAD ./src/Sched.o
-LOAD ./src/Sched_config.o
-LOAD ./src/UARTHandler_program.o
-LOAD ./src/UART_program.o
-LOAD ./src/_write.o
+LOAD ./src/App.o
 LOAD ./src/main.o
+LOAD ./OS/Sched.o
+LOAD ./OS/Sched_config.o
+LOAD ./MCAL/GPIO_program.o
+LOAD ./MCAL/NVIC_Program.o
+LOAD ./MCAL/RCC_program.o
+LOAD ./MCAL/SYSTICK.o
+LOAD ./MCAL/UART_program.o
+LOAD ./HAL/HLCD.o
+LOAD ./HAL/HLCD_config.o
+LOAD ./HAL/HLED.o
+LOAD ./HAL/HSwitch_Config.o
+LOAD ./HAL/HSwitch_program.o
+LOAD ./HAL/UARTHandler_program.o
 LOAD f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libstdc++_nano.a
 LOAD f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libm.a
 START GROUP
@@ -1786,7 +1748,7 @@ END GROUP
                 0x20004c00                __Main_Stack_Limit = (__stack - __Main_Stack_Size)
                 [!provide]                PROVIDE (_Main_Stack_Limit, __Main_Stack_Limit)
                 0x00000100                _Minimum_Stack_Size = 0x100
-                0x200002f8                PROVIDE (_Heap_Begin, _end_noinit)
+                0x20000310                PROVIDE (_Heap_Begin, _end_noinit)
                 0x20004c00                PROVIDE (_Heap_Limit, (__stack - __Main_Stack_Size))
 
 .isr_vector     0x08000000      0x350
@@ -1906,16 +1868,16 @@ END GROUP
 
 .inits          0x08000350       0x28
                 0x08000350                __data_regions_array_start = .
-                0x08000350        0x4 LONG 0x8001f74 LOADADDR (.data)
+                0x08000350        0x4 LONG 0x80021e8 LOADADDR (.data)
                 0x08000354        0x4 LONG 0x20000000 ADDR (.data)
-                0x08000358        0x4 LONG 0x20000094 (ADDR (.data) + SIZEOF (.data))
-                0x0800035c        0x4 LONG 0x8001f74 LOADADDR (.data_CCMRAM)
+                0x08000358        0x4 LONG 0x200000a8 (ADDR (.data) + SIZEOF (.data))
+                0x0800035c        0x4 LONG 0x80021e8 LOADADDR (.data_CCMRAM)
                 0x08000360        0x4 LONG 0x0 ADDR (.data_CCMRAM)
                 0x08000364        0x4 LONG 0x0 (ADDR (.data_CCMRAM) + SIZEOF (.data_CCMRAM))
                 0x08000368                __data_regions_array_end = .
                 0x08000368                __bss_regions_array_start = .
-                0x08000368        0x4 LONG 0x20000094 ADDR (.bss)
-                0x0800036c        0x4 LONG 0x200002f8 (ADDR (.bss) + SIZEOF (.bss))
+                0x08000368        0x4 LONG 0x200000a8 ADDR (.bss)
+                0x0800036c        0x4 LONG 0x20000310 (ADDR (.bss) + SIZEOF (.bss))
                 0x08000370        0x4 LONG 0x0 ADDR (.bss_CCMRAM)
                 0x08000374        0x4 LONG 0x0 (ADDR (.bss_CCMRAM) + SIZEOF (.bss_CCMRAM))
                 0x08000378                __bss_regions_array_end = .
@@ -1941,7 +1903,7 @@ END GROUP
 .flashtext
  *(.flashtext .flashtext.*)
 
-.text           0x08000378     0x1bf3
+.text           0x08000378     0x1e67
  *(.text .text.*)
  .text._exit    0x08000378        0x2 ./system/src/newlib/_exit.o
                 0x08000378                _exit
@@ -1981,183 +1943,210 @@ END GROUP
  .text.SystemCoreClockUpdate
                 0x080006b8       0x94 ./system/src/cmsis/system_stm32f10x.o
                 0x080006b8                SystemCoreClockUpdate
- .text.GPIO_u8SetConfiguration
-                0x0800074c      0x1f0 ./src/GPIO_program.o
-                0x0800074c                GPIO_u8SetConfiguration
- .text.GPIO_u8SetValue
-                0x0800093c       0x6c ./src/GPIO_program.o
-                0x0800093c                GPIO_u8SetValue
- .text.GPIO_u8getValue
-                0x080009a8       0x60 ./src/GPIO_program.o
-                0x080009a8                GPIO_u8getValue
- .text.LCD_WriteProcess
-                0x08000a08       0xb0 ./src/HLCD.o
- .text.LCD_ClearProcess
-                0x08000ab8       0xbc ./src/HLCD.o
- .text.LCD_InitProcess
-                0x08000b74      0x248 ./src/HLCD.o
- .text.LCD_LCDTask
-                0x08000dbc       0x30 ./src/HLCD.o
- .text.LCD_Init
-                0x08000dec       0x58 ./src/HLCD.o
-                0x08000dec                LCD_Init
- .text.LED_Init
-                0x08000e44       0x48 ./src/HLED.o
-                0x08000e44                LED_Init
- .text.HSwitch_Init
-                0x08000e8c       0x10 ./src/HSwitch_program.o
-                0x08000e8c                HSwitch_Init
- .text.RCC_u8GetClockSource
-                0x08000e9c       0x18 ./src/RCC_program.o
-                0x08000e9c                RCC_u8GetClockSource
- .text.RCC_u32GetSysClkValue
-                0x08000eb4       0xcc ./src/RCC_program.o
-                0x08000eb4                RCC_u32GetSysClkValue
- .text.SYSTICK_Init
-                0x08000f80       0x14 ./src/SYSTICK.o
-                0x08000f80                SYSTICK_Init
- .text.SYSTICK_Start
-                0x08000f94       0x14 ./src/SYSTICK.o
-                0x08000f94                SYSTICK_Start
- .text.SYSTICK_SetCallback
-                0x08000fa8       0x14 ./src/SYSTICK.o
-                0x08000fa8                SYSTICK_SetCallback
- .text.SYSTICK_SetTime
-                0x08000fbc       0x54 ./src/SYSTICK.o
-                0x08000fbc                SYSTICK_SetTime
- .text.SysTick_Handler
-                0x08001010       0x14 ./src/SYSTICK.o
-                0x08001010                SysTick_Handler
+ .text.AppTask_Runnable
+                0x0800074c       0x94 ./src/App.o
+                0x0800074c                AppTask_Runnable
+ .text.main     0x080007e0       0x1c ./src/main.o
+                0x080007e0                main
  .text.Sched_SetOSFlag
-                0x08001024       0x10 ./src/Sched.o
- .text.Sched    0x08001034       0x60 ./src/Sched.o
+                0x080007fc       0x10 ./OS/Sched.o
+ .text.Sched    0x0800080c       0x60 ./OS/Sched.o
  .text.Sched_Init
-                0x08001094       0x68 ./src/Sched.o
-                0x08001094                Sched_Init
+                0x0800086c       0x68 ./OS/Sched.o
+                0x0800086c                Sched_Init
  .text.Sched_Start
-                0x080010fc       0x20 ./src/Sched.o
-                0x080010fc                Sched_Start
+                0x080008d4       0x20 ./OS/Sched.o
+                0x080008d4                Sched_Start
+ .text.GPIO_u8SetConfiguration
+                0x080008f4      0x1f0 ./MCAL/GPIO_program.o
+                0x080008f4                GPIO_u8SetConfiguration
+ .text.GPIO_u8SetValue
+                0x08000ae4       0x6c ./MCAL/GPIO_program.o
+                0x08000ae4                GPIO_u8SetValue
+ .text.GPIO_u8getValue
+                0x08000b50       0xb0 ./MCAL/GPIO_program.o
+                0x08000b50                GPIO_u8getValue
+ .text.RCC_u8GetClockSource
+                0x08000c00       0x18 ./MCAL/RCC_program.o
+                0x08000c00                RCC_u8GetClockSource
+ .text.RCC_u32GetSysClkValue
+                0x08000c18       0xcc ./MCAL/RCC_program.o
+                0x08000c18                RCC_u32GetSysClkValue
+ .text.SYSTICK_Init
+                0x08000ce4       0x14 ./MCAL/SYSTICK.o
+                0x08000ce4                SYSTICK_Init
+ .text.SYSTICK_Start
+                0x08000cf8       0x14 ./MCAL/SYSTICK.o
+                0x08000cf8                SYSTICK_Start
+ .text.SYSTICK_SetCallback
+                0x08000d0c       0x14 ./MCAL/SYSTICK.o
+                0x08000d0c                SYSTICK_SetCallback
+ .text.SYSTICK_SetTime
+                0x08000d20       0x54 ./MCAL/SYSTICK.o
+                0x08000d20                SYSTICK_SetTime
+ .text.SysTick_Handler
+                0x08000d74       0x14 ./MCAL/SYSTICK.o
+                0x08000d74                SysTick_Handler
+ .text.UART_sendBuffer
+                0x08000d88       0x30 ./MCAL/UART_program.o
+                0x08000d88                UART_sendBuffer
+ .text.UART_receiveBuffer
+                0x08000db8       0x2c ./MCAL/UART_program.o
+                0x08000db8                UART_receiveBuffer
  .text.USART1_IRQHandler
-                0x0800111c       0x94 ./src/UART_program.o
-                0x0800111c                USART1_IRQHandler
- .text.main     0x080011b0       0x18 ./src/main.o
-                0x080011b0                main
- .text          0x080011c8       0x30 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_aeabi_uldivmod.o)
-                0x080011c8                __aeabi_uldivmod
- .text          0x080011f8      0x2ec f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_udivmoddi4.o)
-                0x080011f8                __udivmoddi4
- .text          0x080014e4        0x4 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_dvmd_tls.o)
-                0x080014e4                __aeabi_idiv0
-                0x080014e4                __aeabi_ldiv0
- .text.__errno  0x080014e8        0xc f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
-                0x080014e8                __errno
+                0x08000de4       0x94 ./MCAL/UART_program.o
+                0x08000de4                USART1_IRQHandler
+ .text.LCD_WriteProcess
+                0x08000e78       0xb0 ./HAL/HLCD.o
+ .text.LCD_ClearProcess
+                0x08000f28       0xbc ./HAL/HLCD.o
+ .text.LCD_InitProcess
+                0x08000fe4      0x248 ./HAL/HLCD.o
+ .text.LCD_LCDTask
+                0x0800122c       0x30 ./HAL/HLCD.o
+ .text.LCD_Init
+                0x0800125c       0x58 ./HAL/HLCD.o
+                0x0800125c                LCD_Init
+ .text.LCD_WriteData
+                0x080012b4       0x3c ./HAL/HLCD.o
+                0x080012b4                LCD_WriteData
+ .text.LED_Init
+                0x080012f0       0x48 ./HAL/HLED.o
+                0x080012f0                LED_Init
+ .text.LED_SetLedState
+                0x08001338       0x58 ./HAL/HLED.o
+                0x08001338                LED_SetLedState
+ .text.Switch_Runnable
+                0x08001390       0x64 ./HAL/HSwitch_program.o
+                0x08001390                Switch_Runnable
+ .text.HSwitch_GetState
+                0x080013f4        0xc ./HAL/HSwitch_program.o
+                0x080013f4                HSwitch_GetState
+ .text.HSwitch_Init
+                0x08001400       0x24 ./HAL/HSwitch_program.o
+                0x08001400                HSwitch_Init
+ .text.HUART_SendData
+                0x08001424        0x8 ./HAL/UARTHandler_program.o
+                0x08001424                HUART_SendData
+ .text.HUART_ReceiveData
+                0x0800142c        0x8 ./HAL/UARTHandler_program.o
+                0x0800142c                HUART_ReceiveData
+ .text          0x08001434       0x30 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_aeabi_uldivmod.o)
+                0x08001434                __aeabi_uldivmod
+ .text          0x08001464      0x2ec f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_udivmoddi4.o)
+                0x08001464                __udivmoddi4
+ .text          0x08001750        0x4 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_dvmd_tls.o)
+                0x08001750                __aeabi_idiv0
+                0x08001750                __aeabi_ldiv0
+ .text.__errno  0x08001754        0xc f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+                0x08001754                __errno
  .text._vsnprintf_r
-                0x080014f4       0x56 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-vsnprintf.o)
-                0x080014f4                _vsniprintf_r
-                0x080014f4                _vsnprintf_r
- *fill*         0x0800154a        0x2 
+                0x08001760       0x56 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-vsnprintf.o)
+                0x08001760                _vsniprintf_r
+                0x08001760                _vsnprintf_r
+ *fill*         0x080017b6        0x2 
  .text.vsnprintf
-                0x0800154c       0x1c f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-vsnprintf.o)
-                0x0800154c                vsniprintf
-                0x0800154c                vsnprintf
+                0x080017b8       0x1c f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-vsnprintf.o)
+                0x080017b8                vsniprintf
+                0x080017b8                vsnprintf
  .text.__ssputs_r
-                0x08001568       0xb2 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o)
-                0x08001568                __ssputs_r
- *fill*         0x0800161a        0x2 
+                0x080017d4       0xb2 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o)
+                0x080017d4                __ssputs_r
+ *fill*         0x08001886        0x2 
  .text._svfprintf_r
-                0x0800161c      0x1e8 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o)
-                0x0800161c                _svfiprintf_r
-                0x0800161c                _svfprintf_r
+                0x08001888      0x1e8 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o)
+                0x08001888                _svfiprintf_r
+                0x08001888                _svfprintf_r
  .text._printf_common
-                0x08001804       0xec f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
-                0x08001804                _printf_common
+                0x08001a70       0xec f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x08001a70                _printf_common
  .text._printf_i
-                0x080018f0      0x24c f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
-                0x080018f0                _printf_i
- .text.memchr   0x08001b3c       0x1c f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memchr-stub.o)
-                0x08001b3c                memchr
- .text.memcpy   0x08001b58       0x16 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
-                0x08001b58                memcpy
- .text.memmove  0x08001b6e       0x36 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memmove.o)
-                0x08001b6e                memmove
- .text._free_r  0x08001ba4       0x98 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-freer.o)
-                0x08001ba4                _free_r
+                0x08001b5c      0x24c f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x08001b5c                _printf_i
+ .text.memchr   0x08001da8       0x1c f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memchr-stub.o)
+                0x08001da8                memchr
+ .text.memcpy   0x08001dc4       0x16 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
+                0x08001dc4                memcpy
+ .text.memmove  0x08001dda       0x36 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memmove.o)
+                0x08001dda                memmove
+ .text._free_r  0x08001e10       0x98 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-freer.o)
+                0x08001e10                _free_r
  .text._malloc_r
-                0x08001c3c       0xbc f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o)
-                0x08001c3c                _malloc_r
+                0x08001ea8       0xbc f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o)
+                0x08001ea8                _malloc_r
  .text._realloc_r
-                0x08001cf8       0x4c f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-reallocr.o)
-                0x08001cf8                _realloc_r
- .text._sbrk_r  0x08001d44       0x20 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sbrkr.o)
-                0x08001d44                _sbrk_r
+                0x08001f64       0x4c f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-reallocr.o)
+                0x08001f64                _realloc_r
+ .text._sbrk_r  0x08001fb0       0x20 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sbrkr.o)
+                0x08001fb0                _sbrk_r
  .text.__malloc_lock
-                0x08001d64        0x2 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-mlock.o)
-                0x08001d64                __malloc_lock
+                0x08001fd0        0x2 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-mlock.o)
+                0x08001fd0                __malloc_lock
  .text.__malloc_unlock
-                0x08001d66        0x2 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-mlock.o)
-                0x08001d66                __malloc_unlock
+                0x08001fd2        0x2 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-mlock.o)
+                0x08001fd2                __malloc_unlock
  .text._malloc_usable_size_r
-                0x08001d68       0x14 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-msizer.o)
-                0x08001d68                _malloc_usable_size_r
+                0x08001fd4       0x14 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-msizer.o)
+                0x08001fd4                _malloc_usable_size_r
  *(.rodata .rodata.* .constdata .constdata.*)
  .rodata.dumpExceptionStack.str1.4
-                0x08001d7c      0x11a ./system/src/cortexm/exception_handlers.o
- *fill*         0x08001e96        0x2 
+                0x08001fe8      0x11a ./system/src/cortexm/exception_handlers.o
+ *fill*         0x08002102        0x2 
  .rodata.str1.4
-                0x08001e98       0x2c ./system/src/cortexm/exception_handlers.o
+                0x08002104       0x2c ./system/src/cortexm/exception_handlers.o
                                  0x2a (size before relaxing)
- .rodata.LCDPins
-                0x08001ec4       0x58 ./src/HLCD_config.o
-                0x08001ec4                LCDPins
- .rodata.Switchmap
-                0x08001f1c        0xc ./src/HSwitch_Config.o
-                0x08001f1c                Switchmap
  .rodata.SysTask_info
-                0x08001f28       0x10 ./src/Sched_config.o
-                0x08001f28                SysTask_info
+                0x08002130       0x18 ./OS/Sched_config.o
+                0x08002130                SysTask_info
+ .rodata.LCDPins
+                0x08002148       0x58 ./HAL/HLCD_config.o
+                0x08002148                LCDPins
+ .rodata.Switchmap
+                0x080021a0        0xc ./HAL/HSwitch_Config.o
+                0x080021a0                Switchmap
  .rodata.str1.1
-                0x08001f38       0x11 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o)
+                0x080021ac       0x11 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o)
  .rodata.str1.1
-                0x08001f49       0x22 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x080021bd       0x22 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
  *(vtable)
  *(.eh_frame*)
  *(.glue_7)
- .glue_7        0x08001f6b        0x0 linker stubs
+ .glue_7        0x080021df        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08001f6b        0x0 linker stubs
+ .glue_7t       0x080021df        0x0 linker stubs
 
-.vfp11_veneer   0x08001f6c        0x0
- .vfp11_veneer  0x08001f6c        0x0 linker stubs
+.vfp11_veneer   0x080021e0        0x0
+ .vfp11_veneer  0x080021e0        0x0 linker stubs
 
-.v4_bx          0x08001f6c        0x0
- .v4_bx         0x08001f6c        0x0 linker stubs
+.v4_bx          0x080021e0        0x0
+ .v4_bx         0x080021e0        0x0 linker stubs
 
-.iplt           0x08001f6c        0x0
- .iplt          0x08001f6c        0x0 ./system/src/stm32f1-stdperiph/misc.o
+.iplt           0x080021e0        0x0
+ .iplt          0x080021e0        0x0 ./system/src/stm32f1-stdperiph/misc.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08001f6c                . = ALIGN (0x4)
-                0x08001f6c                __exidx_start = .
+                0x080021e0                . = ALIGN (0x4)
+                0x080021e0                __exidx_start = .
 
-.ARM.exidx      0x08001f6c        0x8
+.ARM.exidx      0x080021e0        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x08001f6c        0x8 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_udivmoddi4.o)
-                0x08001f74                __exidx_end = .
+ .ARM.exidx     0x080021e0        0x8 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_udivmoddi4.o)
+                0x080021e8                __exidx_end = .
 
-.rel.dyn        0x08001f74        0x0
- .rel.iplt      0x08001f74        0x0 ./system/src/stm32f1-stdperiph/misc.o
-                0x08001f74                . = ALIGN (0x4)
-                0x08001f74                _etext = .
-                0x08001f74                __etext = .
+.rel.dyn        0x080021e8        0x0
+ .rel.iplt      0x080021e8        0x0 ./system/src/stm32f1-stdperiph/misc.o
+                0x080021e8                . = ALIGN (0x4)
+                0x080021e8                _etext = .
+                0x080021e8                __etext = .
 
-.data_CCMRAM    0x00000000        0x0 load address 0x08001f74
+.data_CCMRAM    0x00000000        0x0 load address 0x080021e8
  FILL mask 0xff
  *(.data.CCMRAM .data.CCMRAM.*)
                 0x00000000                . = ALIGN (0x4)
-                0x08001f74                _sidata = LOADADDR (.data)
+                0x080021e8                _sidata = LOADADDR (.data)
 
-.data           0x20000000       0x94 load address 0x08001f74
+.data           0x20000000       0xa8 load address 0x080021e8
  FILL mask 0xff
                 0x20000000                _sdata = .
                 0x20000000                __data_start__ = .
@@ -2172,110 +2161,133 @@ END GROUP
  .data.SystemCoreClock
                 0x2000001c        0x4 ./system/src/cmsis/system_stm32f10x.o
                 0x2000001c                SystemCoreClock
- .data.ptr1     0x20000020        0x4 ./src/HLED.o
-                0x20000020                ptr1
- .data.ptr2     0x20000024        0x4 ./src/HLED.o
-                0x20000024                ptr2
- .data.ptr      0x20000028        0x4 ./src/HSwitch_Config.o
-                0x20000028                ptr
+ .data.DataLengthTX
+                0x20000020        0x1 ./src/App.o
+                0x20000020                DataLengthTX
+ .data.DataLengthRX
+                0x20000021        0x1 ./src/App.o
+                0x20000021                DataLengthRX
+ *fill*         0x20000022        0x2 ff
+ .data.TLocal_Buffer
+                0x20000024        0x4 ./src/App.o
+                0x20000024                TLocal_Buffer
+ .data.AppTask  0x20000028        0x8 ./src/App.o
+                0x20000028                AppTask
+ .data.RLocal_Buffer
+                0x20000030        0x4 ./src/App.o
+                0x20000030                RLocal_Buffer
+ .data.ptr1     0x20000034        0x4 ./HAL/HLED.o
+                0x20000034                ptr1
+ .data.ptr2     0x20000038        0x4 ./HAL/HLED.o
+                0x20000038                ptr2
+ .data.ptr      0x2000003c        0x4 ./HAL/HSwitch_Config.o
+                0x2000003c                ptr
  .data.impure_data
-                0x2000002c       0x60 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+                0x20000040       0x60 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
  .data._impure_ptr
-                0x2000008c        0x4 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
-                0x2000008c                _impure_ptr
+                0x200000a0        0x4 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+                0x200000a0                _impure_ptr
  *(.data_end .data_end.*)
- .data_end      0x20000090        0x4 ./system/src/newlib/_startup.o
-                0x20000094                . = ALIGN (0x4)
-                0x20000094                _edata = .
-                0x20000094                __data_end__ = .
+ .data_end      0x200000a4        0x4 ./system/src/newlib/_startup.o
+                0x200000a8                . = ALIGN (0x4)
+                0x200000a8                _edata = .
+                0x200000a8                __data_end__ = .
 
-.igot.plt       0x20000094        0x0 load address 0x08002008
- .igot.plt      0x20000094        0x0 ./system/src/stm32f1-stdperiph/misc.o
+.igot.plt       0x200000a8        0x0 load address 0x08002290
+ .igot.plt      0x200000a8        0x0 ./system/src/stm32f1-stdperiph/misc.o
 
 .bss_CCMRAM     0x00000000        0x0
  *(.bss.CCMRAM .bss.CCMRAM.*)
 
-.bss            0x20000094      0x264
-                0x20000094                __bss_start__ = .
-                0x20000094                _sbss = .
+.bss            0x200000a8      0x268
+                0x200000a8                __bss_start__ = .
+                0x200000a8                _sbss = .
  *(.bss_begin .bss_begin.*)
- .bss_begin     0x20000094        0x4 ./system/src/newlib/_startup.o
+ .bss_begin     0x200000a8        0x4 ./system/src/newlib/_startup.o
  *(.bss .bss.*)
  .bss.current_heap_end.3961
-                0x20000098        0x4 ./system/src/newlib/_sbrk.o
+                0x200000ac        0x4 ./system/src/newlib/_sbrk.o
  .bss.name.4309
-                0x2000009c        0x1 ./system/src/newlib/_syscalls.o
- *fill*         0x2000009d        0x3 
- .bss.buf.5205  0x200000a0       0x80 ./system/src/diag/Trace.o
- .bss.InitComplete
-                0x20000120        0x1 ./src/HLCD.o
- .bss.Current_state.3840
-                0x20000121        0x1 ./src/HLCD.o
- .bss.counter.3841
-                0x20000122        0x1 ./src/HLCD.o
- .bss.CurrChar.3853
-                0x20000123        0x1 ./src/HLCD.o
- .bss.CurrentProcess
-                0x20000124        0x1 ./src/HLCD.o
-                0x20000124                CurrentProcess
- *fill*         0x20000125        0x3 
- .bss.Lcd_Data  0x20000128       0xff ./src/HLCD.o
- .bss.Lcd_Length
-                0x20000227        0x1 ./src/HLCD.o
- .bss.rxBuffer  0x20000228        0xc ./src/UART_program.o
+                0x200000b0        0x1 ./system/src/newlib/_syscalls.o
+ *fill*         0x200000b1        0x3 
+ .bss.buf.5205  0x200000b4       0x80 ./system/src/diag/Trace.o
+ .bss.rxBuffer  0x20000134        0xc ./MCAL/UART_program.o
  .bss.appTxNotify
-                0x20000234        0x4 ./src/UART_program.o
- .bss.txBuffer  0x20000238        0xc ./src/UART_program.o
+                0x20000140        0x4 ./MCAL/UART_program.o
+ .bss.txBuffer  0x20000144        0xc ./MCAL/UART_program.o
+ .bss.InitComplete
+                0x20000150        0x1 ./HAL/HLCD.o
+ .bss.Current_state.3840
+                0x20000151        0x1 ./HAL/HLCD.o
+ .bss.counter.3841
+                0x20000152        0x1 ./HAL/HLCD.o
+ .bss.CurrChar.3853
+                0x20000153        0x1 ./HAL/HLCD.o
+ .bss.CurrentProcess
+                0x20000154        0x1 ./HAL/HLCD.o
+                0x20000154                CurrentProcess
+ *fill*         0x20000155        0x3 
+ .bss.Lcd_Data  0x20000158       0xff ./HAL/HLCD.o
+ .bss.Lcd_Length
+                0x20000257        0x1 ./HAL/HLCD.o
+ .bss.counter.3759
+                0x20000258        0x2 ./HAL/HSwitch_program.o
+ *fill*         0x2000025a        0x2 
+ .bss.Prev_state.3758
+                0x2000025c        0x2 ./HAL/HSwitch_program.o
+ *fill*         0x2000025e        0x2 
+ .bss.SwitchState
+                0x20000260        0x2 ./HAL/HSwitch_program.o
+ *fill*         0x20000262        0x2 
  .bss.__malloc_sbrk_start
-                0x20000244        0x4 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o)
-                0x20000244                __malloc_sbrk_start
+                0x20000264        0x4 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o)
+                0x20000264                __malloc_sbrk_start
  .bss.__malloc_free_list
-                0x20000248        0x4 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o)
-                0x20000248                __malloc_free_list
+                0x20000268        0x4 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o)
+                0x20000268                __malloc_free_list
  *(COMMON)
- COMMON         0x2000024c        0x4 ./system/src/newlib/_syscalls.o
-                0x2000024c                errno
- COMMON         0x20000250        0x8 ./src/HLCD.o
-                0x20000250                LCDTask
- COMMON         0x20000258       0x46 ./src/HLED.o
-                0x20000258                Gpio
-                0x20000280                Led
- *fill*         0x2000029e        0x2 
- COMMON         0x200002a0        0x4 ./src/SYSTICK.o
-                0x200002a0                APPcbf
- COMMON         0x200002a4       0x28 ./src/Sched.o
-                0x200002a4                idx
-                0x200002a8                SysTask
-                0x200002c8                OSFlag
- COMMON         0x200002cc       0x28 ./src/main.o
-                0x200002cc                RxFrame
-                0x200002d0                TxFrame
-                0x200002d4                task4
-                0x200002dc                task1
-                0x200002e4                task2
-                0x200002ec                task3
+ COMMON         0x2000026c        0x4 ./system/src/newlib/_syscalls.o
+                0x2000026c                errno
+ COMMON         0x20000270        0x6 ./src/App.o
+                0x20000270                RxFrame
+                0x20000274                TxFrame
+ *fill*         0x20000276        0x2 
+ COMMON         0x20000278       0x38 ./OS/Sched.o
+                0x20000278                idx
+                0x2000027c                SysTask
+                0x200002ac                OSFlag
+ COMMON         0x200002b0        0x4 ./MCAL/SYSTICK.o
+                0x200002b0                APPcbf
+ COMMON         0x200002b4        0x8 ./HAL/HLCD.o
+                0x200002b4                LCDTask
+ COMMON         0x200002bc       0x46 ./HAL/HLED.o
+                0x200002bc                Gpio
+                0x200002e4                Led
+ *fill*         0x20000302        0x2 
+ COMMON         0x20000304        0x8 ./HAL/HSwitch_program.o
+                0x20000304                SwitchTask
  *(.bss_end .bss_end.*)
- .bss_end       0x200002f4        0x4 ./system/src/newlib/_startup.o
-                0x200002f8                . = ALIGN (0x4)
-                0x200002f8                __bss_end__ = .
-                0x200002f8                _ebss = .
+ .bss_end       0x2000030c        0x4 ./system/src/newlib/_startup.o
+                0x20000310                . = ALIGN (0x4)
+                0x20000310                __bss_end__ = .
+                0x20000310                _ebss = .
 
 .noinit_CCMRAM
  *(.noinit.CCMRAM .noinit.CCMRAM.*)
 
-.noinit         0x200002f8        0x0
-                0x200002f8                _noinit = .
+.noinit         0x20000310        0x0
+                0x20000310                _noinit = .
  *(.noinit .noinit.*)
-                0x200002f8                . = ALIGN (0x4)
-                0x200002f8                _end_noinit = .
+                0x20000310                . = ALIGN (0x4)
+                0x20000310                _end_noinit = .
                 [!provide]                PROVIDE (end, _end_noinit)
                 [!provide]                PROVIDE (_end, _end_noinit)
                 [!provide]                PROVIDE (__end, _end_noinit)
                 [!provide]                PROVIDE (__end__, _end_noinit)
 
-._check_stack   0x200002f8      0x100
-                0x200003f8                . = (. + _Minimum_Stack_Size)
- *fill*         0x200002f8      0x100 
+._check_stack   0x20000310      0x100
+                0x20000410                . = (. + _Minimum_Stack_Size)
+ *fill*         0x20000310      0x100 
 
 .b1text
  *(.b1text)
@@ -2333,19 +2345,21 @@ END GROUP
  .comment       0x0000007e       0x7f ./system/src/cortexm/exception_handlers.o
  .comment       0x0000007e       0x7f ./system/src/cmsis/system_stm32f10x.o
  .comment       0x0000007e       0x7f ./system/src/cmsis/vectors_stm32f10x.o
- .comment       0x0000007e       0x6e ./src/GPIO_program.o
+ .comment       0x0000007e       0x6e ./src/App.o
                                  0x6f (size before relaxing)
- .comment       0x000000ec       0x6f ./src/HLCD.o
- .comment       0x000000ec       0x6f ./src/HLCD_config.o
- .comment       0x000000ec       0x6f ./src/HLED.o
- .comment       0x000000ec       0x6f ./src/HSwitch_Config.o
- .comment       0x000000ec       0x6f ./src/HSwitch_program.o
- .comment       0x000000ec       0x6f ./src/RCC_program.o
- .comment       0x000000ec       0x6f ./src/SYSTICK.o
- .comment       0x000000ec       0x6f ./src/Sched.o
- .comment       0x000000ec       0x6f ./src/Sched_config.o
- .comment       0x000000ec       0x6f ./src/UART_program.o
  .comment       0x000000ec       0x6f ./src/main.o
+ .comment       0x000000ec       0x6f ./OS/Sched.o
+ .comment       0x000000ec       0x6f ./OS/Sched_config.o
+ .comment       0x000000ec       0x6f ./MCAL/GPIO_program.o
+ .comment       0x000000ec       0x6f ./MCAL/RCC_program.o
+ .comment       0x000000ec       0x6f ./MCAL/SYSTICK.o
+ .comment       0x000000ec       0x6f ./MCAL/UART_program.o
+ .comment       0x000000ec       0x6f ./HAL/HLCD.o
+ .comment       0x000000ec       0x6f ./HAL/HLCD_config.o
+ .comment       0x000000ec       0x6f ./HAL/HLED.o
+ .comment       0x000000ec       0x6f ./HAL/HSwitch_Config.o
+ .comment       0x000000ec       0x6f ./HAL/HSwitch_program.o
+ .comment       0x000000ec       0x6f ./HAL/UARTHandler_program.o
 
 .ARM.attributes
                 0x00000000       0x31
@@ -2370,63 +2384,67 @@ END GROUP
  .ARM.attributes
                 0x000001cb       0x33 ./system/src/cmsis/vectors_stm32f10x.o
  .ARM.attributes
-                0x000001fe       0x33 ./src/GPIO_program.o
+                0x000001fe       0x33 ./src/App.o
  .ARM.attributes
-                0x00000231       0x33 ./src/HLCD.o
+                0x00000231       0x33 ./src/main.o
  .ARM.attributes
-                0x00000264       0x33 ./src/HLCD_config.o
+                0x00000264       0x33 ./OS/Sched.o
  .ARM.attributes
-                0x00000297       0x33 ./src/HLED.o
+                0x00000297       0x33 ./OS/Sched_config.o
  .ARM.attributes
-                0x000002ca       0x33 ./src/HSwitch_Config.o
+                0x000002ca       0x33 ./MCAL/GPIO_program.o
  .ARM.attributes
-                0x000002fd       0x33 ./src/HSwitch_program.o
+                0x000002fd       0x33 ./MCAL/RCC_program.o
  .ARM.attributes
-                0x00000330       0x33 ./src/RCC_program.o
+                0x00000330       0x33 ./MCAL/SYSTICK.o
  .ARM.attributes
-                0x00000363       0x33 ./src/SYSTICK.o
+                0x00000363       0x33 ./MCAL/UART_program.o
  .ARM.attributes
-                0x00000396       0x33 ./src/Sched.o
+                0x00000396       0x33 ./HAL/HLCD.o
  .ARM.attributes
-                0x000003c9       0x33 ./src/Sched_config.o
+                0x000003c9       0x33 ./HAL/HLCD_config.o
  .ARM.attributes
-                0x000003fc       0x33 ./src/UART_program.o
+                0x000003fc       0x33 ./HAL/HLED.o
  .ARM.attributes
-                0x0000042f       0x33 ./src/main.o
+                0x0000042f       0x33 ./HAL/HSwitch_Config.o
  .ARM.attributes
-                0x00000462       0x1d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_aeabi_uldivmod.o)
+                0x00000462       0x33 ./HAL/HSwitch_program.o
  .ARM.attributes
-                0x0000047f       0x2d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_udivmoddi4.o)
+                0x00000495       0x33 ./HAL/UARTHandler_program.o
  .ARM.attributes
-                0x000004ac       0x1d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_dvmd_tls.o)
+                0x000004c8       0x1d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_aeabi_uldivmod.o)
  .ARM.attributes
-                0x000004c9       0x2d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+                0x000004e5       0x2d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_udivmoddi4.o)
  .ARM.attributes
-                0x000004f6       0x2d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+                0x00000512       0x1d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_dvmd_tls.o)
  .ARM.attributes
-                0x00000523       0x2d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-vsnprintf.o)
+                0x0000052f       0x2d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
  .ARM.attributes
-                0x00000550       0x2d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o)
+                0x0000055c       0x2d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
  .ARM.attributes
-                0x0000057d       0x2d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x00000589       0x2d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-vsnprintf.o)
  .ARM.attributes
-                0x000005aa       0x2d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memchr-stub.o)
+                0x000005b6       0x2d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o)
  .ARM.attributes
-                0x000005d7       0x2d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
+                0x000005e3       0x2d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
  .ARM.attributes
-                0x00000604       0x2d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memmove.o)
+                0x00000610       0x2d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memchr-stub.o)
  .ARM.attributes
-                0x00000631       0x2d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-freer.o)
+                0x0000063d       0x2d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
  .ARM.attributes
-                0x0000065e       0x2d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o)
+                0x0000066a       0x2d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memmove.o)
  .ARM.attributes
-                0x0000068b       0x2d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-reallocr.o)
+                0x00000697       0x2d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-freer.o)
  .ARM.attributes
-                0x000006b8       0x2d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sbrkr.o)
+                0x000006c4       0x2d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o)
  .ARM.attributes
-                0x000006e5       0x2d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-mlock.o)
+                0x000006f1       0x2d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-reallocr.o)
  .ARM.attributes
-                0x00000712       0x2d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-msizer.o)
+                0x0000071e       0x2d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sbrkr.o)
+ .ARM.attributes
+                0x0000074b       0x2d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-mlock.o)
+ .ARM.attributes
+                0x00000778       0x2d f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-msizer.o)
 
 .debug
  *(.debug)
@@ -2440,7 +2458,7 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x4a8
+.debug_aranges  0x00000000      0x500
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x28 ./system/src/newlib/_exit.o
@@ -2463,34 +2481,38 @@ END GROUP
  .debug_aranges
                 0x00000210       0x20 ./system/src/cmsis/vectors_stm32f10x.o
  .debug_aranges
-                0x00000230       0x30 ./src/GPIO_program.o
+                0x00000230       0x20 ./src/App.o
  .debug_aranges
-                0x00000260       0x50 ./src/HLCD.o
+                0x00000250       0x20 ./src/main.o
  .debug_aranges
-                0x000002b0       0x18 ./src/HLCD_config.o
+                0x00000270       0x40 ./OS/Sched.o
  .debug_aranges
-                0x000002c8       0x28 ./src/HLED.o
+                0x000002b0       0x18 ./OS/Sched_config.o
  .debug_aranges
-                0x000002f0       0x18 ./src/HSwitch_Config.o
+                0x000002c8       0x30 ./MCAL/GPIO_program.o
  .debug_aranges
-                0x00000308       0x30 ./src/HSwitch_program.o
+                0x000002f8       0x60 ./MCAL/RCC_program.o
  .debug_aranges
-                0x00000338       0x60 ./src/RCC_program.o
+                0x00000358       0x48 ./MCAL/SYSTICK.o
  .debug_aranges
-                0x00000398       0x48 ./src/SYSTICK.o
+                0x000003a0       0x50 ./MCAL/UART_program.o
  .debug_aranges
-                0x000003e0       0x40 ./src/Sched.o
+                0x000003f0       0x50 ./HAL/HLCD.o
  .debug_aranges
-                0x00000420       0x18 ./src/Sched_config.o
+                0x00000440       0x18 ./HAL/HLCD_config.o
  .debug_aranges
-                0x00000438       0x50 ./src/UART_program.o
+                0x00000458       0x28 ./HAL/HLED.o
  .debug_aranges
-                0x00000488       0x20 ./src/main.o
+                0x00000480       0x18 ./HAL/HSwitch_Config.o
+ .debug_aranges
+                0x00000498       0x30 ./HAL/HSwitch_program.o
+ .debug_aranges
+                0x000004c8       0x38 ./HAL/UARTHandler_program.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x6c00
+.debug_info     0x00000000     0x7154
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x956 ./system/src/newlib/_exit.o
  .debug_info    0x00000956      0x942 ./system/src/newlib/_sbrk.o
@@ -2502,20 +2524,22 @@ END GROUP
  .debug_info    0x00003221     0x1140 ./system/src/cortexm/exception_handlers.o
  .debug_info    0x00004361      0x494 ./system/src/cmsis/system_stm32f10x.o
  .debug_info    0x000047f5       0xca ./system/src/cmsis/vectors_stm32f10x.o
- .debug_info    0x000048bf      0x2d5 ./src/GPIO_program.o
- .debug_info    0x00004b94      0x9e0 ./src/HLCD.o
- .debug_info    0x00005574      0x18c ./src/HLCD_config.o
- .debug_info    0x00005700      0x2a4 ./src/HLED.o
- .debug_info    0x000059a4      0x176 ./src/HSwitch_Config.o
- .debug_info    0x00005b1a      0x227 ./src/HSwitch_program.o
- .debug_info    0x00005d41      0x492 ./src/RCC_program.o
- .debug_info    0x000061d3      0x167 ./src/SYSTICK.o
- .debug_info    0x0000633a      0x2bf ./src/Sched.o
- .debug_info    0x000065f9      0x10f ./src/Sched_config.o
- .debug_info    0x00006708      0x326 ./src/UART_program.o
- .debug_info    0x00006a2e      0x1d2 ./src/main.o
+ .debug_info    0x000048bf      0x242 ./src/App.o
+ .debug_info    0x00004b01       0xe0 ./src/main.o
+ .debug_info    0x00004be1      0x2bf ./OS/Sched.o
+ .debug_info    0x00004ea0      0x11a ./OS/Sched_config.o
+ .debug_info    0x00004fba      0x2d5 ./MCAL/GPIO_program.o
+ .debug_info    0x0000528f      0x492 ./MCAL/RCC_program.o
+ .debug_info    0x00005721      0x167 ./MCAL/SYSTICK.o
+ .debug_info    0x00005888      0x326 ./MCAL/UART_program.o
+ .debug_info    0x00005bae      0x9e0 ./HAL/HLCD.o
+ .debug_info    0x0000658e      0x18c ./HAL/HLCD_config.o
+ .debug_info    0x0000671a      0x2a4 ./HAL/HLED.o
+ .debug_info    0x000069be      0x176 ./HAL/HSwitch_Config.o
+ .debug_info    0x00006b34      0x276 ./HAL/HSwitch_program.o
+ .debug_info    0x00006daa      0x3aa ./HAL/UARTHandler_program.o
 
-.debug_abbrev   0x00000000     0x1f13
+.debug_abbrev   0x00000000     0x20da
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x1f3 ./system/src/newlib/_exit.o
  .debug_abbrev  0x000001f3      0x1fc ./system/src/newlib/_sbrk.o
@@ -2527,20 +2551,22 @@ END GROUP
  .debug_abbrev  0x00000d18      0x32b ./system/src/cortexm/exception_handlers.o
  .debug_abbrev  0x00001043      0x177 ./system/src/cmsis/system_stm32f10x.o
  .debug_abbrev  0x000011ba       0x9d ./system/src/cmsis/vectors_stm32f10x.o
- .debug_abbrev  0x00001257       0xf8 ./src/GPIO_program.o
- .debug_abbrev  0x0000134f      0x1bb ./src/HLCD.o
- .debug_abbrev  0x0000150a       0x98 ./src/HLCD_config.o
- .debug_abbrev  0x000015a2      0x133 ./src/HLED.o
- .debug_abbrev  0x000016d5       0xa0 ./src/HSwitch_Config.o
- .debug_abbrev  0x00001775      0x134 ./src/HSwitch_program.o
- .debug_abbrev  0x000018a9      0x13b ./src/RCC_program.o
- .debug_abbrev  0x000019e4       0xf9 ./src/SYSTICK.o
- .debug_abbrev  0x00001add      0x1ad ./src/Sched.o
- .debug_abbrev  0x00001c8a       0x92 ./src/Sched_config.o
- .debug_abbrev  0x00001d1c      0x148 ./src/UART_program.o
- .debug_abbrev  0x00001e64       0xaf ./src/main.o
+ .debug_abbrev  0x00001257       0xe3 ./src/App.o
+ .debug_abbrev  0x0000133a       0x65 ./src/main.o
+ .debug_abbrev  0x0000139f      0x1ad ./OS/Sched.o
+ .debug_abbrev  0x0000154c       0x92 ./OS/Sched_config.o
+ .debug_abbrev  0x000015de       0xf8 ./MCAL/GPIO_program.o
+ .debug_abbrev  0x000016d6      0x13b ./MCAL/RCC_program.o
+ .debug_abbrev  0x00001811       0xf9 ./MCAL/SYSTICK.o
+ .debug_abbrev  0x0000190a      0x148 ./MCAL/UART_program.o
+ .debug_abbrev  0x00001a52      0x1bb ./HAL/HLCD.o
+ .debug_abbrev  0x00001c0d       0x98 ./HAL/HLCD_config.o
+ .debug_abbrev  0x00001ca5      0x133 ./HAL/HLED.o
+ .debug_abbrev  0x00001dd8       0xa0 ./HAL/HSwitch_Config.o
+ .debug_abbrev  0x00001e78      0x14c ./HAL/HSwitch_program.o
+ .debug_abbrev  0x00001fc4      0x116 ./HAL/UARTHandler_program.o
 
-.debug_line     0x00000000     0x39f6
+.debug_line     0x00000000     0x5451
  *(.debug_line)
  .debug_line    0x00000000      0x3eb ./system/src/newlib/_exit.o
  .debug_line    0x000003eb      0x39f ./system/src/newlib/_sbrk.o
@@ -2552,20 +2578,22 @@ END GROUP
  .debug_line    0x00001f95      0x796 ./system/src/cortexm/exception_handlers.o
  .debug_line    0x0000272b      0x40e ./system/src/cmsis/system_stm32f10x.o
  .debug_line    0x00002b39      0x127 ./system/src/cmsis/vectors_stm32f10x.o
- .debug_line    0x00002c60      0x166 ./src/GPIO_program.o
- .debug_line    0x00002dc6      0x1b6 ./src/HLCD.o
- .debug_line    0x00002f7c       0x74 ./src/HLCD_config.o
- .debug_line    0x00002ff0       0xf2 ./src/HLED.o
- .debug_line    0x000030e2       0xa1 ./src/HSwitch_Config.o
- .debug_line    0x00003183       0xee ./src/HSwitch_program.o
- .debug_line    0x00003271      0x29f ./src/RCC_program.o
- .debug_line    0x00003510       0xe1 ./src/SYSTICK.o
- .debug_line    0x000035f1      0x133 ./src/Sched.o
- .debug_line    0x00003724       0x6d ./src/Sched_config.o
- .debug_line    0x00003791      0x143 ./src/UART_program.o
- .debug_line    0x000038d4      0x122 ./src/main.o
+ .debug_line    0x00002c60      0x35a ./src/App.o
+ .debug_line    0x00002fba      0x351 ./src/main.o
+ .debug_line    0x0000330b      0x2d4 ./OS/Sched.o
+ .debug_line    0x000035df      0x252 ./OS/Sched_config.o
+ .debug_line    0x00003831      0x2c6 ./MCAL/GPIO_program.o
+ .debug_line    0x00003af7      0x3b6 ./MCAL/RCC_program.o
+ .debug_line    0x00003ead      0x1f8 ./MCAL/SYSTICK.o
+ .debug_line    0x000040a5      0x2e7 ./MCAL/UART_program.o
+ .debug_line    0x0000438c      0x3e5 ./HAL/HLCD.o
+ .debug_line    0x00004771      0x217 ./HAL/HLCD_config.o
+ .debug_line    0x00004988      0x295 ./HAL/HLED.o
+ .debug_line    0x00004c1d      0x244 ./HAL/HSwitch_Config.o
+ .debug_line    0x00004e61      0x32a ./HAL/HSwitch_program.o
+ .debug_line    0x0000518b      0x2c6 ./HAL/UARTHandler_program.o
 
-.debug_frame    0x00000000      0xbe0
+.debug_frame    0x00000000      0xc88
  *(.debug_frame)
  .debug_frame   0x00000000       0x38 ./system/src/newlib/_exit.o
  .debug_frame   0x00000038       0x28 ./system/src/newlib/_sbrk.o
@@ -2577,32 +2605,34 @@ END GROUP
  .debug_frame   0x00000264      0x158 ./system/src/cortexm/exception_handlers.o
  .debug_frame   0x000003bc       0x6c ./system/src/cmsis/system_stm32f10x.o
  .debug_frame   0x00000428       0x20 ./system/src/cmsis/vectors_stm32f10x.o
- .debug_frame   0x00000448       0x54 ./src/GPIO_program.o
- .debug_frame   0x0000049c       0xd8 ./src/HLCD.o
- .debug_frame   0x00000574       0x44 ./src/HLED.o
- .debug_frame   0x000005b8       0x58 ./src/HSwitch_program.o
- .debug_frame   0x00000610       0xb8 ./src/RCC_program.o
- .debug_frame   0x000006c8       0x80 ./src/SYSTICK.o
- .debug_frame   0x00000748       0x7c ./src/Sched.o
- .debug_frame   0x000007c4       0xa4 ./src/UART_program.o
- .debug_frame   0x00000868       0x28 ./src/main.o
- .debug_frame   0x00000890       0x2c f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_aeabi_uldivmod.o)
- .debug_frame   0x000008bc       0x38 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_udivmoddi4.o)
- .debug_frame   0x000008f4       0x20 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
- .debug_frame   0x00000914       0x48 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-vsnprintf.o)
- .debug_frame   0x0000095c       0x90 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o)
- .debug_frame   0x000009ec       0x60 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
- .debug_frame   0x00000a4c       0x28 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memchr-stub.o)
- .debug_frame   0x00000a74       0x28 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
- .debug_frame   0x00000a9c       0x28 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memmove.o)
- .debug_frame   0x00000ac4       0x38 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-freer.o)
- .debug_frame   0x00000afc       0x2c f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o)
- .debug_frame   0x00000b28       0x3c f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-reallocr.o)
- .debug_frame   0x00000b64       0x2c f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sbrkr.o)
- .debug_frame   0x00000b90       0x30 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-mlock.o)
- .debug_frame   0x00000bc0       0x20 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-msizer.o)
+ .debug_frame   0x00000448       0x28 ./src/App.o
+ .debug_frame   0x00000470       0x28 ./src/main.o
+ .debug_frame   0x00000498       0x7c ./OS/Sched.o
+ .debug_frame   0x00000514       0x54 ./MCAL/GPIO_program.o
+ .debug_frame   0x00000568       0xb8 ./MCAL/RCC_program.o
+ .debug_frame   0x00000620       0x80 ./MCAL/SYSTICK.o
+ .debug_frame   0x000006a0       0xa4 ./MCAL/UART_program.o
+ .debug_frame   0x00000744       0xd8 ./HAL/HLCD.o
+ .debug_frame   0x0000081c       0x44 ./HAL/HLED.o
+ .debug_frame   0x00000860       0x58 ./HAL/HSwitch_program.o
+ .debug_frame   0x000008b8       0x80 ./HAL/UARTHandler_program.o
+ .debug_frame   0x00000938       0x2c f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x00000964       0x38 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x0000099c       0x20 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+ .debug_frame   0x000009bc       0x48 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-vsnprintf.o)
+ .debug_frame   0x00000a04       0x90 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-svfprintf.o)
+ .debug_frame   0x00000a94       0x60 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_frame   0x00000af4       0x28 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memchr-stub.o)
+ .debug_frame   0x00000b1c       0x28 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x00000b44       0x28 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memmove.o)
+ .debug_frame   0x00000b6c       0x38 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x00000ba4       0x2c f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x00000bd0       0x3c f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-reallocr.o)
+ .debug_frame   0x00000c0c       0x2c f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-sbrkr.o)
+ .debug_frame   0x00000c38       0x30 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-mlock.o)
+ .debug_frame   0x00000c68       0x20 f:/mina/embeded_systems/es_iti_intake_40/es_turkey comp. arch/materials/arm tools iti/arm gcc/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-nano-msizer.o)
 
-.debug_str      0x00000000    0x580c7
+.debug_str      0x00000000    0x581e4
  *(.debug_str)
  .debug_str     0x00000000     0x7d16 ./system/src/newlib/_exit.o
                                0x7ee9 (size before relaxing)
@@ -2624,32 +2654,36 @@ END GROUP
                               0x4e8d2 (size before relaxing)
  .debug_str     0x00055aaa       0x57 ./system/src/cmsis/vectors_stm32f10x.o
                                0x3877 (size before relaxing)
- .debug_str     0x00055b01      0x662 ./src/GPIO_program.o
-                               0x2a31 (size before relaxing)
- .debug_str     0x00056163     0x10fc ./src/HLCD.o
+ .debug_str     0x00055b01     0x146a ./src/App.o
+                               0x3865 (size before relaxing)
+ .debug_str     0x00056f6b       0x44 ./src/main.o
+                               0x3745 (size before relaxing)
+ .debug_str     0x00056faf      0x1d8 ./OS/Sched.o
+                               0x3605 (size before relaxing)
+ .debug_str     0x00057187       0x20 ./OS/Sched_config.o
+                               0x26ce (size before relaxing)
+ .debug_str     0x000571a7      0x24b ./MCAL/GPIO_program.o
+                               0x2a32 (size before relaxing)
+ .debug_str     0x000573f2      0x221 ./MCAL/RCC_program.o
+                               0x371d (size before relaxing)
+ .debug_str     0x00057613      0x15a ./MCAL/SYSTICK.o
+                               0x2828 (size before relaxing)
+ .debug_str     0x0005776d      0x59a ./MCAL/UART_program.o
+                               0x2bd9 (size before relaxing)
+ .debug_str     0x00057d07      0x2de ./HAL/HLCD.o
                                0x39c1 (size before relaxing)
- .debug_str     0x0005725f       0x15 ./src/HLCD_config.o
+ .debug_str     0x00057fe5       0x15 ./HAL/HLCD_config.o
                                0x29d8 (size before relaxing)
- .debug_str     0x00057274       0xd9 ./src/HLED.o
+ .debug_str     0x00057ffa       0xad ./HAL/HLED.o
                                0x2a09 (size before relaxing)
- .debug_str     0x0005734d       0x8a ./src/HSwitch_Config.o
+ .debug_str     0x000580a7       0x73 ./HAL/HSwitch_Config.o
                                0x28cc (size before relaxing)
- .debug_str     0x000573d7       0x80 ./src/HSwitch_program.o
-                               0x2939 (size before relaxing)
- .debug_str     0x00057457      0x236 ./src/RCC_program.o
-                               0x371c (size before relaxing)
- .debug_str     0x0005768d      0x226 ./src/SYSTICK.o
-                               0x2827 (size before relaxing)
- .debug_str     0x000578b3      0x109 ./src/Sched.o
-                               0x3606 (size before relaxing)
- .debug_str     0x000579bc       0x22 ./src/Sched_config.o
-                               0x2695 (size before relaxing)
- .debug_str     0x000579de      0x5ce ./src/UART_program.o
-                               0x2bd8 (size before relaxing)
- .debug_str     0x00057fac      0x11b ./src/main.o
-                               0x37d0 (size before relaxing)
+ .debug_str     0x0005811a       0x56 ./HAL/HSwitch_program.o
+                               0x2974 (size before relaxing)
+ .debug_str     0x00058170       0x74 ./HAL/UARTHandler_program.o
+                               0x3cc8 (size before relaxing)
 
-.debug_loc      0x00000000     0x1c7c
+.debug_loc      0x00000000     0x1e17
  *(.debug_loc)
  .debug_loc     0x00000000       0x85 ./system/src/newlib/_sbrk.o
  .debug_loc     0x00000085      0x1a9 ./system/src/newlib/_startup.o
@@ -2658,14 +2692,15 @@ END GROUP
  .debug_loc     0x00000387      0x121 ./system/src/diag/trace_impl.o
  .debug_loc     0x000004a8      0x291 ./system/src/cortexm/exception_handlers.o
  .debug_loc     0x00000739       0xdf ./system/src/cmsis/system_stm32f10x.o
- .debug_loc     0x00000818      0x510 ./src/GPIO_program.o
- .debug_loc     0x00000d28      0x13e ./src/HLCD.o
- .debug_loc     0x00000e66       0xf7 ./src/HLED.o
- .debug_loc     0x00000f5d       0x4b ./src/HSwitch_program.o
- .debug_loc     0x00000fa8      0xa48 ./src/RCC_program.o
- .debug_loc     0x000019f0       0xd3 ./src/SYSTICK.o
- .debug_loc     0x00001ac3       0x48 ./src/Sched.o
- .debug_loc     0x00001b0b      0x171 ./src/UART_program.o
+ .debug_loc     0x00000818       0x48 ./OS/Sched.o
+ .debug_loc     0x00000860      0x5a6 ./MCAL/GPIO_program.o
+ .debug_loc     0x00000e06      0xa48 ./MCAL/RCC_program.o
+ .debug_loc     0x0000184e       0xd3 ./MCAL/SYSTICK.o
+ .debug_loc     0x00001921      0x171 ./MCAL/UART_program.o
+ .debug_loc     0x00001a92      0x13e ./HAL/HLCD.o
+ .debug_loc     0x00001bd0       0xf7 ./HAL/HLED.o
+ .debug_loc     0x00001cc7       0x4b ./HAL/HSwitch_program.o
+ .debug_loc     0x00001d12      0x105 ./HAL/UARTHandler_program.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -2683,7 +2718,7 @@ END GROUP
  *(.debug_varnames)
 OUTPUT(Project.elf elf32-littlearm)
 
-.debug_ranges   0x00000000      0x3a8
+.debug_ranges   0x00000000      0x3e0
  .debug_ranges  0x00000000       0x18 ./system/src/newlib/_exit.o
  .debug_ranges  0x00000018       0x10 ./system/src/newlib/_sbrk.o
  .debug_ranges  0x00000028       0x78 ./system/src/newlib/_startup.o
@@ -2694,17 +2729,19 @@ OUTPUT(Project.elf elf32-littlearm)
  .debug_ranges  0x00000150       0x80 ./system/src/cortexm/exception_handlers.o
  .debug_ranges  0x000001d0       0x28 ./system/src/cmsis/system_stm32f10x.o
  .debug_ranges  0x000001f8       0x10 ./system/src/cmsis/vectors_stm32f10x.o
- .debug_ranges  0x00000208       0x20 ./src/GPIO_program.o
- .debug_ranges  0x00000228       0x40 ./src/HLCD.o
- .debug_ranges  0x00000268       0x18 ./src/HLED.o
- .debug_ranges  0x00000280       0x20 ./src/HSwitch_program.o
- .debug_ranges  0x000002a0       0x50 ./src/RCC_program.o
- .debug_ranges  0x000002f0       0x38 ./src/SYSTICK.o
- .debug_ranges  0x00000328       0x30 ./src/Sched.o
- .debug_ranges  0x00000358       0x40 ./src/UART_program.o
- .debug_ranges  0x00000398       0x10 ./src/main.o
+ .debug_ranges  0x00000208       0x10 ./src/App.o
+ .debug_ranges  0x00000218       0x10 ./src/main.o
+ .debug_ranges  0x00000228       0x30 ./OS/Sched.o
+ .debug_ranges  0x00000258       0x20 ./MCAL/GPIO_program.o
+ .debug_ranges  0x00000278       0x50 ./MCAL/RCC_program.o
+ .debug_ranges  0x000002c8       0x38 ./MCAL/SYSTICK.o
+ .debug_ranges  0x00000300       0x40 ./MCAL/UART_program.o
+ .debug_ranges  0x00000340       0x40 ./HAL/HLCD.o
+ .debug_ranges  0x00000380       0x18 ./HAL/HLED.o
+ .debug_ranges  0x00000398       0x20 ./HAL/HSwitch_program.o
+ .debug_ranges  0x000003b8       0x28 ./HAL/UARTHandler_program.o
 
-.debug_macro    0x00000000     0x3a27
+.debug_macro    0x00000000     0x3c46
  .debug_macro   0x00000000      0x1b4 ./system/src/newlib/_exit.o
  .debug_macro   0x000001b4       0x9c ./system/src/newlib/_exit.o
  .debug_macro   0x00000250      0x10e ./system/src/newlib/_exit.o
@@ -2749,31 +2786,37 @@ OUTPUT(Project.elf elf32-littlearm)
  .debug_macro   0x00002451       0x10 ./system/src/cortexm/exception_handlers.o
  .debug_macro   0x00002461      0x16e ./system/src/cmsis/system_stm32f10x.o
  .debug_macro   0x000025cf       0x34 ./system/src/cmsis/vectors_stm32f10x.o
- .debug_macro   0x00002603       0x66 ./src/GPIO_program.o
- .debug_macro   0x00002669      0x88c ./src/GPIO_program.o
- .debug_macro   0x00002ef5       0x10 ./src/GPIO_program.o
- .debug_macro   0x00002f05       0x22 ./src/GPIO_program.o
- .debug_macro   0x00002f27       0x82 ./src/GPIO_program.o
- .debug_macro   0x00002fa9       0x97 ./src/HLCD.o
- .debug_macro   0x00003040      0x405 ./src/HLCD.o
- .debug_macro   0x00003445       0x88 ./src/HLCD.o
- .debug_macro   0x000034cd       0x64 ./src/HLCD.o
- .debug_macro   0x00003531       0x36 ./src/HLCD_config.o
- .debug_macro   0x00003567       0x52 ./src/HLED.o
- .debug_macro   0x000035b9       0x22 ./src/HLED.o
- .debug_macro   0x000035db       0x10 ./src/HLED.o
- .debug_macro   0x000035eb       0x5b ./src/HSwitch_Config.o
- .debug_macro   0x00003646       0x4f ./src/HSwitch_program.o
- .debug_macro   0x00003695       0x10 ./src/HSwitch_program.o
- .debug_macro   0x000036a5       0x4d ./src/RCC_program.o
- .debug_macro   0x000036f2       0x28 ./src/RCC_program.o
- .debug_macro   0x0000371a       0x54 ./src/SYSTICK.o
- .debug_macro   0x0000376e       0x1c ./src/SYSTICK.o
- .debug_macro   0x0000378a       0x16 ./src/SYSTICK.o
- .debug_macro   0x000037a0       0x5f ./src/Sched.o
- .debug_macro   0x000037ff       0x22 ./src/Sched.o
- .debug_macro   0x00003821       0x16 ./src/Sched.o
- .debug_macro   0x00003837       0x31 ./src/Sched_config.o
- .debug_macro   0x00003868       0x32 ./src/UART_program.o
- .debug_macro   0x0000389a      0x106 ./src/UART_program.o
- .debug_macro   0x000039a0       0x87 ./src/main.o
+ .debug_macro   0x00002603       0xa1 ./src/App.o
+ .debug_macro   0x000026a4      0x88c ./src/App.o
+ .debug_macro   0x00002f30       0x10 ./src/App.o
+ .debug_macro   0x00002f40       0x22 ./src/App.o
+ .debug_macro   0x00002f62       0x88 ./src/App.o
+ .debug_macro   0x00002fea      0x40b ./src/App.o
+ .debug_macro   0x000033f5       0x2e ./src/App.o
+ .debug_macro   0x00003423       0x10 ./src/App.o
+ .debug_macro   0x00003433       0x7d ./src/main.o
+ .debug_macro   0x000034b0       0x55 ./OS/Sched.o
+ .debug_macro   0x00003505       0x22 ./OS/Sched.o
+ .debug_macro   0x00003527       0x16 ./OS/Sched.o
+ .debug_macro   0x0000353d       0x53 ./OS/Sched_config.o
+ .debug_macro   0x00003590       0x5c ./MCAL/GPIO_program.o
+ .debug_macro   0x000035ec       0x43 ./MCAL/RCC_program.o
+ .debug_macro   0x0000362f       0x28 ./MCAL/RCC_program.o
+ .debug_macro   0x00003657       0x50 ./MCAL/SYSTICK.o
+ .debug_macro   0x000036a7       0x1c ./MCAL/SYSTICK.o
+ .debug_macro   0x000036c3       0x16 ./MCAL/SYSTICK.o
+ .debug_macro   0x000036d9       0x32 ./MCAL/UART_program.o
+ .debug_macro   0x0000370b      0x106 ./MCAL/UART_program.o
+ .debug_macro   0x00003811       0x89 ./HAL/HLCD.o
+ .debug_macro   0x0000389a       0x64 ./HAL/HLCD.o
+ .debug_macro   0x000038fe       0x32 ./HAL/HLCD_config.o
+ .debug_macro   0x00003930       0x82 ./HAL/HLCD_config.o
+ .debug_macro   0x000039b2       0x48 ./HAL/HLED.o
+ .debug_macro   0x000039fa       0x22 ./HAL/HLED.o
+ .debug_macro   0x00003a1c       0x10 ./HAL/HLED.o
+ .debug_macro   0x00003a2c       0x46 ./HAL/HSwitch_Config.o
+ .debug_macro   0x00003a72       0x10 ./HAL/HSwitch_Config.o
+ .debug_macro   0x00003a82       0x51 ./HAL/HSwitch_program.o
+ .debug_macro   0x00003ad3       0x10 ./HAL/HSwitch_program.o
+ .debug_macro   0x00003ae3       0x57 ./HAL/UARTHandler_program.o
+ .debug_macro   0x00003b3a      0x10c ./HAL/UARTHandler_program.o

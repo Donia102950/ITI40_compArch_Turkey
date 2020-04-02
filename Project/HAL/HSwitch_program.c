@@ -8,16 +8,18 @@
 #include "Hswitch_intertface.h"
 #include "HSwitch_Config.h"
 #include "GPIO_interface.h"
+#include "Sched.h"
 
 /*********************************************************************************************************************/
+void Switch_Runnable(void);
 
 
 extern GPIO_t* ptr;
 
 static uint_8t SwitchState[MAX_SWITCH_NUMBER];
 
+task_t SwitchTask;
 
-extern const Switch_t Switchmap[];
 /*********************************************************************************************************************/
 
 uint_8t HSwitch_GetState(uint_8t Switch_num)
@@ -46,7 +48,7 @@ void Switch_Runnable(void)
 		{
 			counter[Iterator]=0;
 		}
-		if(counter[Iterator]==5)
+		if(counter[Iterator]==5)/*25ms dev tick time */
 		{
 			SwitchState[Iterator]=Current_State[Iterator];
 		}
@@ -58,6 +60,8 @@ void Switch_Runnable(void)
 
 void HSwitch_Init(void)
 {
+	SwitchTask.Runnable=Switch_Runnable;
+	SwitchTask.periodicity=5;						/*macro*/
 
 	GPIO_u8SetConfiguration(ptr);
 }

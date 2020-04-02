@@ -1,4 +1,12 @@
-
+/*********************************************************************************************************************/
+/*
+ * Author : Mina ,Menna ,Donia ,Hamam ,Nouran
+ *
+ * Date : 4/2/2020
+ *
+ * Version : V01
+ *
+ */
 /*********************************************************************************************************************/
 #include "STD_TYPES.h"
 #include "BIT_MATH.h"
@@ -12,21 +20,8 @@
 #include "HLED_Interface.h"
 /*********************************************************************************************************************/
 
-task_t task1;
-task_t task2;
-task_t task3;
-task_t task4;
-typedef struct{
 
-	uint_8t SwitchState;
-	uint_8t LcdCounter;
-	uint_8t LedState;
-}data_frame;
-
-data_frame TxFrame;
-data_frame RxFrame;
 /*********************************************************************************************************************/
-
 int main(void)
 {
 	HSwitch_Init();
@@ -34,13 +29,9 @@ int main(void)
 	 LCD_Init();
 	 Sched_Init();
 	 Sched_Start();
+	 return 0;
 }
+/*********************************************************************************************************************/
 
-//void task_switch(void){
-//	if(switchValue){
-//		counter++;
-//	}
-//	HUART_SendData();
-//}
 
 

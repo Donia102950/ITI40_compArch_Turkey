@@ -14,6 +14,9 @@ RM := rm -rf
 -include system/src/cortexm/subdir.mk
 -include system/src/cmsis/subdir.mk
 -include src/subdir.mk
+-include OS/subdir.mk
+-include MCAL/subdir.mk
+-include HAL/subdir.mk
 -include subdir.mk
 -include objects.mk
 

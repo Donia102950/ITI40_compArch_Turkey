@@ -233,31 +233,37 @@ uint_8t GPIO_u8getValue(GPIO_t *p,uint_32t pin ,uint_8t *state)
 	case PORTA:
 		if( ((PORTA_POINTER->IDR) & ( pin ) ) )
 		{
-			*state=1;
+			if(p->mode==MODE_INPUT_INPUTPULLDOWN)*state=1;/**           1 -------------- pressed  */
+			else *state=0;
 		}
 		else
 		{
-			*state=0;
+			if(p->mode==MODE_INPUT_INPUTPULLDOWN)*state=0;/**           0 -------------- released  */
+			else *state=1;
 		}
 		break;
 	case PORTB:
 		if( (PORTB_POINTER->IDR) & (pin))
 		{
-			*state=1;
+			if(p->mode==MODE_INPUT_INPUTPULLDOWN)*state=1;/**           1 -------------- pressed  */
+			else *state=0 ;
 		}
 		else
 		{
-			*state=0;
+			if(p->mode==MODE_INPUT_INPUTPULLDOWN)*state=0;/**           0 -------------- released  */
+			else *state=1;
 		}
 		break;
 	case PORTC:
 		if( (PORTC_POINTER->IDR) & (pin) )
 		{
-			*state=1;
+			if(p->mode==MODE_INPUT_INPUTPULLDOWN)*state=1;/**           1 -------------- pressed  */
+			else *state=0 ;
 		}
 		else
 		{
-			*state=0;
+			if(p->mode==MODE_INPUT_INPUTPULLDOWN)*state=0;/**           0 -------------- released  */
+			else *state=1;
 		}
 		break;
 	default :

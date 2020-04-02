@@ -24,6 +24,7 @@
 #define SWITCh_TWO	1
 
 
+
 /*********************************************************************************************************************/
 
 const Switch_t Switchmap={.Switch.pin=PIN1,.Switch.mode=MODE_INPUT_INPUTPULLUP,.Switch.speed=SPEED_50MHZ,.Switch.port=PORTA,.ID=SWITCH_ONE};

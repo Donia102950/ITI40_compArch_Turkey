@@ -3,7 +3,7 @@
 #define SCHED_CONFIG_H
 
 #define SCHED_TICK_mSEC 5
-#define MAX_TASKS 2
+#define MAX_TASKS 3
 /*********************************************************************************************************************/
 
 typedef struct
