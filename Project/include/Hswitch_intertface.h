@@ -8,13 +8,7 @@
 #ifndef HSWITCH_INTERTFACE_H_
 #define HSWITCH_INTERTFACE_H_
 #include "STD_Types.h"
-
-
-
-
-
-
-
+/*********************************************************************************************************************/
 
 
 extern void HSwitch_Init(void);

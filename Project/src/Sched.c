@@ -1,11 +1,12 @@
 #include "STD_TYPES.h"
 #include "RCC_interface.h"
-#include "DSYSTICK.h"
+#include "SYSTICK.h"
 
 #include "Sched_config.h"
 
 #define TASK_READY 1
 #define TASK_SUSPEND 2
+/*********************************************************************************************************************/
 
 typedef struct
 {
@@ -14,15 +15,22 @@ typedef struct
 	uint_32t PeriodTicks;
 	uint_32t TicksToExec;
 }systask_t;
+/*********************************************************************************************************************/
+
 uint_32t OSFlag;
 /*uint_32t TickFreq;*/
 systask_t SysTask [MAX_TASKS];
 uint_8t idx;
+
 extern  TaskBaseInfo_t SysTask_info [MAX_TASKS];
+/*********************************************************************************************************************/
+
 static void Sched_SetOSFlag (void)
 {
 	OSFlag++;
 }
+/*********************************************************************************************************************/
+
 static void Sched(void)
 {
 	for (idx=0;idx<MAX_TASKS;idx++)
@@ -35,6 +43,7 @@ static void Sched(void)
 		SysTask[idx].TicksToExec--;
 	}
 }
+/*********************************************************************************************************************/
 
 uint_8t Sched_Init(void)
 {
@@ -78,6 +87,8 @@ uint_8t Sched_Init(void)
 	}
 	return localError;
 }
+/*********************************************************************************************************************/
+
 uint_8t Sched_Start(void)
 {
 	SYSTICK_Start();
@@ -90,6 +101,8 @@ uint_8t Sched_Start(void)
 		}
 	}
 }
+/*********************************************************************************************************************/
+
 void Sched_Suspend(void)
 {
 	SysTask[idx].state=TASK_SUSPEND;

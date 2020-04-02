@@ -276,11 +276,15 @@ StdError RCC_ErrSysClk(myclock Clk, uint_32t Clock_Value) {
 	}
 	return Local_Error;
 }
+/*********************************************************************************************************************/
+
 
 uint_8t RCC_u8GetClockSource(void) {
 	uint_8t SWS_Value = (GET_BIT(RCC->CFGR,SWS1) << 1) + GET_BIT(RCC->CFGR, SWS0);
 	return SWS_Value;
 }
+/*********************************************************************************************************************/
+
 
 StdError RCC_voidEnPeriClk(uint_8t Peripheral) {
 	StdError LocalError;
@@ -311,6 +315,7 @@ StdError RCC_voidEnPeriClk(uint_8t Peripheral) {
 	}
 	return LocalError;
 }
+/*********************************************************************************************************************/
 
 StdError RCC_voidDisPeriClk(uint_8t Peripheral) {
 	StdError LocalError;
@@ -342,6 +347,7 @@ StdError RCC_voidDisPeriClk(uint_8t Peripheral) {
 	return LocalError;
 
 }
+/*********************************************************************************************************************/
 
 uint_32t RCC_u32GetSysClkValue(void) {
 	uint_32t PLL_CLK_Value, SysClkValue;
@@ -430,6 +436,7 @@ uint_32t RCC_u32GetSysClkValue(void) {
 	}
 	return SysClkValue;
 }
+/*********************************************************************************************************************/
 
 uint_32t RCC_u32GetAHBClkValue(void) {
 	uint_32t AHB_Clk;
@@ -475,6 +482,7 @@ uint_32t RCC_u32GetAHBClkValue(void) {
 	}
 	return AHB_Clk;
 }
+/*********************************************************************************************************************/
 
 StdError APB2_Divider(APB_Pre Prescaler) {
 	StdError LocalError;
@@ -505,6 +513,7 @@ StdError APB2_Divider(APB_Pre Prescaler) {
 	}
 	return LocalError;
 }
+/*********************************************************************************************************************/
 
 StdError APB1_Divider(APB_Pre Prescaler) {
 	StdError LocalError;
@@ -536,6 +545,7 @@ StdError APB1_Divider(APB_Pre Prescaler) {
 	}
 	return LocalError;
 }
+/*********************************************************************************************************************/
 
 StdError AHB_Divider(AHB_Pre Prescaler) {
 	StdError LocalError;

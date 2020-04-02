@@ -94,6 +94,7 @@ void UART_Config(uint_32t baudRate,uint_8t stopBits,uint_8t parity,uint_8t dataB
 	}
 
 }
+/*********************************************************************************************************************/
 
 void UART_sendBuffer(uint_8t *buffer , uint_16t len)
 {
@@ -111,6 +112,7 @@ void UART_sendBuffer(uint_8t *buffer , uint_16t len)
 		}
 	}
 }
+/*********************************************************************************************************************/
 
 void UART_receiveBuffer(uint_8t *buffer , uint_16t len){
 	if(buffer && len!=0){
@@ -124,6 +126,7 @@ void UART_receiveBuffer(uint_8t *buffer , uint_16t len){
 	}
 
 }
+/*********************************************************************************************************************/
 
 void USART1_IRQHandler(void){
 	if(USART1->USART_SR & USART_SR_TXE){
@@ -151,12 +154,14 @@ void USART1_IRQHandler(void){
 		}
 	}
 }
+/*********************************************************************************************************************/
 
 void UART_setTXcbf(txcbf_t txcbf){
 	if(txcbf){
 		appTxNotify = txcbf;
 	}
 }
+/*********************************************************************************************************************/
 
 void UART_setRXcbf(rxcbf_t rxcbf){
 	if(rxcbf){

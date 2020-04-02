@@ -9,6 +9,7 @@
 #include "HSwitch_Config.h"
 #include "GPIO_interface.h"
 
+/*********************************************************************************************************************/
 
 
 extern GPIO_t* ptr;
@@ -17,6 +18,7 @@ static uint_8t SwitchState[MAX_SWITCH_NUMBER];
 
 
 extern const Switch_t Switchmap[];
+/*********************************************************************************************************************/
 
 uint_8t HSwitch_GetState(uint_8t Switch_num)
 {
@@ -24,6 +26,8 @@ uint_8t HSwitch_GetState(uint_8t Switch_num)
 	return SwitchState[Switch_num];
 
 }
+/*********************************************************************************************************************/
+
 /*this task should be run every 5 ms*/
 void Switch_Runnable(void)
 {
@@ -50,6 +54,8 @@ void Switch_Runnable(void)
 	}
 
 }
+/*********************************************************************************************************************/
+
 void HSwitch_Init(void)
 {
 

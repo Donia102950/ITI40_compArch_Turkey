@@ -18,6 +18,7 @@
  *Reutrn : StdError */
 
 StdError RCC_ErrSysClk(myclock Clk,uint_32t Clock_Value);
+/*********************************************************************************************************************/
 
 /*RCC_u8GetClockSource function is used to get which clock is use as system clock
  * Input : Void
@@ -26,37 +27,44 @@ StdError RCC_ErrSysClk(myclock Clk,uint_32t Clock_Value);
  * 			2 -> PLL */
 
 uint_8t RCC_u8GetClockSource(void);
+/*********************************************************************************************************************/
 
 /* RCC_voidEnPeriClk function is used to Enable peripheral clock
  * Input: peripheral name
  * Return : StdError*/
 
 StdError RCC_voidEnPeriClk(uint_8t Peripheral);
+/*********************************************************************************************************************/
 
 /* RCC_voidDisPeriClk function is used to Enable peripheral clock
  * Input: peripheral name
  * Return : StdError*/
 
 StdError RCC_voidDisPeriClk(uint_8t Peripheral);
+/*********************************************************************************************************************/
 
 /* RCC_u32GetSysClkValue function is used to get value of system clock in HZ */
 
 uint_32t RCC_u32GetSysClkValue(void);
+/*********************************************************************************************************************/
 
 /* RCC_u32GetAHBClkValue function is used to get value of AHB bus clock in HZ */
 
 uint_32t RCC_u32GetAHBClkValue(void);
+/*********************************************************************************************************************/
 
 /* APB2_Divider function is used to set a prescaler for APB2 Bus
  * **Prescaler Values are  0,2,4,8,16 */
 
 StdError APB2_Divider(APB_Pre Prescaler);
+/*********************************************************************************************************************/
 
 /* APB1_Divider function is used to set a prescaler for APB2 Bus
  * Input: Prescaler Values are  0,2,4,8,16
  * Return : StdError */
 
 StdError APB1_Divider(APB_Pre Prescaler);
+/*********************************************************************************************************************/
 
 /* AHB_Divider function is used to set a peascaler for APB2 Bus
  * Input: Prescaler Values are  0,2,4,8,16,64,128,256,512

@@ -4,7 +4,6 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../src/DSYSTICK.c \
 ../src/GPIO_program.c \
 ../src/HLCD.c \
 ../src/HLCD_config.c \
@@ -13,6 +12,7 @@ C_SRCS += \
 ../src/HSwitch_program.c \
 ../src/NVIC_Program.c \
 ../src/RCC_program.c \
+../src/SYSTICK.c \
 ../src/Sched.c \
 ../src/Sched_config.c \
 ../src/UARTHandler_program.c \
@@ -21,7 +21,6 @@ C_SRCS += \
 ../src/main.c 
 
 OBJS += \
-./src/DSYSTICK.o \
 ./src/GPIO_program.o \
 ./src/HLCD.o \
 ./src/HLCD_config.o \
@@ -30,6 +29,7 @@ OBJS += \
 ./src/HSwitch_program.o \
 ./src/NVIC_Program.o \
 ./src/RCC_program.o \
+./src/SYSTICK.o \
 ./src/Sched.o \
 ./src/Sched_config.o \
 ./src/UARTHandler_program.o \
@@ -38,7 +38,6 @@ OBJS += \
 ./src/main.o 
 
 C_DEPS += \
-./src/DSYSTICK.d \
 ./src/GPIO_program.d \
 ./src/HLCD.d \
 ./src/HLCD_config.d \
@@ -47,6 +46,7 @@ C_DEPS += \
 ./src/HSwitch_program.d \
 ./src/NVIC_Program.d \
 ./src/RCC_program.d \
+./src/SYSTICK.d \
 ./src/Sched.d \
 ./src/Sched_config.d \
 ./src/UARTHandler_program.d \

@@ -16,6 +16,7 @@ typedef struct
 	uint_8t PIN_MODE;
 	uint_8t PIN_SPEED;
 }LED;
+/*********************************************************************************************************************/
 
 void LED_Init(void);
 void LED_SetLedState(LED * ptr , uint_8t state);

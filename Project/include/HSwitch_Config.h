@@ -10,6 +10,7 @@
 #include "STD_Types.h"
 #include "GPIO_interface.h"
 #define MAX_SWITCH_NUMBER 	 2
+/*********************************************************************************************************************/
 
 typedef struct
  {

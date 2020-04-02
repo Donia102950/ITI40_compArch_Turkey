@@ -11,6 +11,7 @@
 #include "UARTHandler_interface.h"
 #include "UART_interface.h"
 
+/*********************************************************************************************************************/
 
 void HUART_Init(void){
 	UART_Init();
@@ -34,6 +35,7 @@ void HUART_Init(void){
 	RCC_voidEnPeriClk(USART1_PERIPHERAL);
 
 }
+/*********************************************************************************************************************/
 
 void HUART_Configuration(uint_32t baudRate,uint_8t stopBits,uint_8t parity,uint_8t dataBits)
 {
@@ -41,10 +43,14 @@ void HUART_Configuration(uint_32t baudRate,uint_8t stopBits,uint_8t parity,uint_
 	SysClk = RCC_u32GetSysClkValue();
 	UART_Config(baudRate,stopBits,parity,dataBits,&SysClk);
 }
+/*********************************************************************************************************************/
+
 void HUART_SendData(uint_8t *buffer , uint_16t len)
 {
 	UART_sendBuffer(buffer,len);
 }
+/*********************************************************************************************************************/
+
 
 void HUART_ReceiveData(uint_8t *buffer , uint_16t len)
 {
