@@ -56,5 +56,3 @@ void HUART_ReceiveData(uint_8t *buffer , uint_16t len)
 {
 	UART_receiveBuffer(buffer,len);
 }
-
-
