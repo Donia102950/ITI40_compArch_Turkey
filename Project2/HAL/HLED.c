@@ -26,9 +26,9 @@ void LED_SetLedState(uint_8t LedNumber , uint_8t state)
 {
 
 	if( Led[LedNumber].LED_MODE==LED_ACTIVE_HIGH)
-		{
+	{
 
-			if(state == ON)
+		if(state == ON)
 		{
 			GPIO_u8SetValue((Led[LedNumber].GPIO_cfg),Led[LedNumber].GPIO_cfg->pin,state);
 		}
@@ -41,20 +41,20 @@ void LED_SetLedState(uint_8t LedNumber , uint_8t state)
 	else if( Led[LedNumber].LED_MODE==LED_ACTIVE_LOW)
 	{
 		if( Led[LedNumber].LED_MODE==LED_ACTIVE_HIGH)
-				{
+		{
 
-					if(state == ON)
-				{
-					GPIO_u8SetValue((Led[LedNumber].GPIO_cfg),Led[LedNumber].GPIO_cfg->pin,~state);
-				}
-
-				}
-
-				else if(state == OFF)
-				{
-					GPIO_u8SetValue((Led[LedNumber].GPIO_cfg),(Led[LedNumber].GPIO_cfg->pin),~state);
-				}
-
+			if(state == ON)
+			{
+				GPIO_u8SetValue((Led[LedNumber].GPIO_cfg),Led[LedNumber].GPIO_cfg->pin,~state);
 			}
+
+		}
+
+		else if(state == OFF)
+		{
+			GPIO_u8SetValue((Led[LedNumber].GPIO_cfg),(Led[LedNumber].GPIO_cfg->pin),~state);
+		}
+
+	}
 
 }

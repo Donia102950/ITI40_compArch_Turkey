@@ -99,7 +99,7 @@ void AppTask_Runnable (void)
 /*Send Data*/
 	if(LocalFlag==1)
 	{
-	HUART_SendData(TLocal_Buffer,DataLengthTX);
+	HUART_SendData(TxFrame,DataLengthTX);
 	LocalFlag=0;
 	}
 	else
