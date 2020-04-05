@@ -13,6 +13,7 @@
 
 /*********************************************************************************************************************/
 
+
 void HUART_Init(void){
 	UART_Init();
 	GPIO_t TxPin;
@@ -57,4 +58,15 @@ void HUART_ReceiveData(uint_8t *buffer , uint_16t len)
 	UART_receiveBuffer(buffer,len);
 }
 
+void HUART_setTXcbf(Htxcbf_t txcbf){
+	if(txcbf){
+		UART_setTXcbf(txcbf);
+	}
+}
+/*********************************************************************************************************************/
 
+void HUART_setRXcbf(Hrxcbf_t rxcbf){
+	if(rxcbf){
+		UART_setRXcbf (rxcbf);
+	}
+}

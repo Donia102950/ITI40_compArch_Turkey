@@ -353,6 +353,7 @@ uint_32t RCC_u32GetSysClkValue(void) {
 	uint_32t PLL_CLK_Value, SysClkValue;
 	uint_8t PLLMul_Value = (RCC->CFGR >> 18) & (0x0000000F);
 	uint_8t SysClk = RCC_u8GetClockSource();
+
 	switch (SysClk) {
 	case HSI:
 		SysClkValue = 8000000;

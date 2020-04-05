@@ -12,6 +12,8 @@
 #define MAX_SWITCH_NUMBER 	 2
 /*********************************************************************************************************************/
 
+#define SwitchNumber  1
+
 typedef struct
  {
 	GPIO_t Switch;

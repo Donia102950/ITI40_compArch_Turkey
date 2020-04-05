@@ -151,6 +151,7 @@ void USART1_IRQHandler(void){
 			rxBuffer.ptr = NULL;
 			rxBuffer.size = 0;
 			rxBuffer.state = IDLE_STATE;
+			appRxNotify();
 		}
 	}
 }

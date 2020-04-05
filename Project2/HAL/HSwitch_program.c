@@ -14,8 +14,8 @@
 void Switch_Runnable(void);
 
 
-extern GPIO_t* ptr;
-
+//extern GPIO_t* ptr;
+extern Switch_t Switchmap[SwitchNumber];
 static uint_8t SwitchState[MAX_SWITCH_NUMBER];
 
 task_t SwitchTask;
@@ -38,7 +38,7 @@ void Switch_Runnable(void)
 
 	for (Iterator=0;Iterator<MAX_SWITCH_NUMBER;Iterator++)
 	{
-		GPIO_u8getValue(ptr,ptr->pin,&Current_State[Iterator]);
+		GPIO_u8getValue(&(Switchmap[Iterator].Switch),Switchmap[Iterator].Switch.pin,&Current_State[Iterator]);
 
 		if( Current_State[Iterator]==Prev_state[Iterator])
 		{
@@ -60,8 +60,11 @@ void Switch_Runnable(void)
 
 void HSwitch_Init(void)
 {
+	uint_8t Iterator;
 	SwitchTask.Runnable=Switch_Runnable;
 	SwitchTask.periodicity=5;						/*macro*/
-
-	GPIO_u8SetConfiguration(ptr);
+	for (Iterator=0;Iterator<MAX_SWITCH_NUMBER;Iterator++)
+	{
+		GPIO_u8SetConfiguration(&(Switchmap[Iterator].Switch));
+	}
 }

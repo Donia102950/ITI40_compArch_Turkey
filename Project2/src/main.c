@@ -26,10 +26,11 @@ int main(void)
 {
 	HSwitch_Init();
 	LED_Init();
-	 LCD_Init();
-	 Sched_Init();
-	 Sched_Start();
-	 return 0;
+	LCD_Init();
+	HUART_Init();
+	Sched_Init();
+	Sched_Start();
+	return 0;
 }
 /*********************************************************************************************************************/
 

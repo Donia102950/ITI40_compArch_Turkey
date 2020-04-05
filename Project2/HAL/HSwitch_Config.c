@@ -27,8 +27,14 @@
 
 /*********************************************************************************************************************/
 
-const Switch_t Switchmap={.Switch.pin=PIN1,.Switch.mode=MODE_INPUT_INPUTPULLUP,.Switch.speed=SPEED_50MHZ,.Switch.port=PORTA,.ID=SWITCH_ONE};
-GPIO_t* ptr =&(Switchmap.Switch);
+const Switch_t Switchmap[SwitchNumber]={
+		{.Switch.pin=PIN1,
+		.Switch.mode=MODE_INPUT_INPUTPULLUP,
+		.Switch.speed=SPEED_50MHZ,
+		.Switch.port=PORTA,
+		.ID=SWITCH_ONE}};
+
+//GPIO_t* ptr =&(Switchmap.Switch);
 /*********************************************************************************************************************/
 
 
